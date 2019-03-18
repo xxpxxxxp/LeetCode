@@ -1,3 +1,5 @@
 build/
 out/
 *.class
+.gradle
+.idea
