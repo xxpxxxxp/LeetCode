@@ -37,7 +37,7 @@ fun heapsort(n: IntArray) {
         val tmp = n[0]
         n[0] = n[end]
         n[end] = tmp
-        end = end-1
+        end -= 1
         siftDown(n, 0, end)
     }
 }
