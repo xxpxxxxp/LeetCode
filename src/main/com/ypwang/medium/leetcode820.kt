@@ -1,26 +1,37 @@
 package com.ypwang.medium
 
-import java.util.*
-
 class Solution820 {
+    class Trie {
+        val follow: Array<Trie?> = Array(26){null}
+
+        private fun add(word: String, idx: Int) {
+            if (idx == word.length) return
+
+            if (follow[word[idx] - 'a'] == null)
+                follow[word[idx] - 'a'] = Trie()
+
+            follow[word[idx] - 'a']!!.add(word, idx + 1)
+        }
+
+        fun add(word: String) {
+            add(word, 0)
+        }
+
+        private fun getTotalLen(pre: Int): Int {
+            if (follow.all { it == null }) return pre + 1
+            return follow.map { it?.getTotalLen(pre + 1) ?: 0 }.sum()
+        }
+
+        fun getTotalLen(): Int = getTotalLen(0)
+    }
+
     fun minimumLengthEncoding(words: Array<String>): Int {
-        var len = 0
-
-        if (words.isEmpty()) {
-            return len
+        val trie = Trie()
+        for (word in words) {
+            trie.add(word.reversed())
         }
 
-        val tmp = LinkedList<String>()
-        tmp.addAll(words)
-        while (tmp.isNotEmpty()) {
-            val base = tmp.pop()
-            len += (base.length + 1)
-            while (tmp.isNotEmpty() && base.endsWith(tmp.peek())) {
-                tmp.pop()
-            }
-        }
-
-        return len
+        return trie.getTotalLen()
     }
 }
 

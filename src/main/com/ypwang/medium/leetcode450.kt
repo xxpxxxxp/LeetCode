@@ -1,70 +1,42 @@
 package com.ypwang.medium
 
-import com.ypwang.TreeNode
-
 class Solution450 {
-    private fun maxOfLeft(father: TreeNode?, cur: TreeNode?): TreeNode? {
-        if (cur == null) return null
-        if (cur.right == null) {
-            if (father != null)
-                father.right = cur.left
-            return cur
-        }
-        return maxOfLeft(cur, cur.right)
+    class TreeNode(var `val`: Int) {
+        var left: TreeNode? = null
+        var right: TreeNode? = null
     }
 
-    private fun minOfRight(father: TreeNode?, cur: TreeNode?): TreeNode? {
-        if (cur == null) return null
-        if (cur.left == null) {
-            if (father != null)
-                father.left = cur.right
-            return cur
-        }
-        return maxOfLeft(cur, cur.left)
+    private fun successor(root: TreeNode): Int {
+        var r = root.right!!
+        while (r.left != null) r = r.left!!
+        return r.`val`
+    }
+
+    private fun predecessor(root: TreeNode): Int {
+        var l = root.left!!
+        while (l.right != null) l = l.right!!
+        return l.`val`
     }
 
     fun deleteNode(root: TreeNode?, key: Int): TreeNode? {
-        return when {
-            root == null -> null
-            root.`val` == key -> {
-                val left = maxOfLeft(null, root.left)
-                if (left != null) {
-                    if (left.`val` != root.left!!.`val`)
-                        left.left = root.left
-                    left.right = root.right
-                    return left
-                }
+        if (root == null) return null
 
-                val right = minOfRight(null, root.right)
-                if (right != null) {
-                    right.left = root.left
-                    if (right.`val` != root.right!!.`val`)
-                        right.right = root.right
-                    return right
-                }
-                return null
-            }
-            root.`val` > key -> {
-                root.left = deleteNode(root.left, key)
-                return root
-            }
-            else -> {
-                root.right = deleteNode(root.right, key)
-                return root
+        // delete from the right subtree
+        if (key > root.`val`)
+            root.right = deleteNode(root.right, key)
+        else if (key < root.`val`)
+            root.left = deleteNode(root.left, key)
+        else {
+            // the node is a leaf
+            if (root.left == null && root.right == null) return null
+            else if (root.right != null) {
+                root.`val` = successor(root)
+                root.right = deleteNode(root.right, root.`val`)
+            } else {
+                root.`val` = predecessor(root)
+                root.left = deleteNode(root.left, root.`val`)
             }
         }
+        return root
     }
-}
-
-fun main() {
-    val root = TreeNode(5)
-    root.left = TreeNode(3)
-    root.left!!.left = TreeNode(2)
-    root.left!!.right = TreeNode(4)
-    root.right = TreeNode(6)
-    root.right!!.right = TreeNode(7)
-
-    //val a = Solution450().deleteNode(root,3)
-    val b = Solution450().deleteNode(root,6)
-    val c = Solution450().deleteNode(b,5)
 }

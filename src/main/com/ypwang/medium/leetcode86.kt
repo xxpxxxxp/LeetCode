@@ -4,44 +4,33 @@ import com.ypwang.ListNode
 
 class Solution86 {
     fun partition(head: ListNode?, x: Int): ListNode? {
-        var p: ListNode? = null
-        var q: ListNode? = null
-        var hp: ListNode? = null
-        var hq: ListNode? = null
+        val lesser = ListNode(0)
+        val bigger = ListNode(0)
 
-        var h = head
-
-        while (h != null) {
-            if (h.`val` < x) {
-                if (p == null) {
-                    hp = h
-                    p = h
-                }
-                else {
-                    p.next = h
-                    p = h
-                }
+        var l = lesser
+        var b = bigger
+        var cur = head
+        while (cur != null) {
+            if (cur.`val` < x) {
+                // append to lesser
+                l.next = cur
+                l = l.next!!
             } else {
-                if (q == null) {
-                    hq = h
-                    q = h
-                }
-                else {
-                    q.next = h
-                    q = h
-                }
+                // append to bigger
+                b.next = cur
+                b = b.next!!
             }
-            h = h.next
+            cur = cur.next
         }
-        return if (p == null) hq
-        else {
-            p.next = hq
-            hp
-        }
+
+        b.next = null
+        l.next = bigger.next
+
+        return lesser.next
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val root = ListNode(1)
     root.next = ListNode(4)
     root.next!!.next = ListNode(3)
