@@ -8,9 +8,6 @@ class Solution815 {
 
         val r = routes.map { it.toSet() }.toTypedArray()
 
-        var max = Int.MAX_VALUE
-        var count = 0
-
         val graph = Array(r.size) { mutableListOf<Int>() }
 
         for (i in 0 until r.lastIndex) {
@@ -23,7 +20,7 @@ class Solution815 {
         }
 
         val seen = IntArray(r.size){ Int.MAX_VALUE }
-        val queue: Queue<Pair<Int, Int>> = LinkedList<Pair<Int, Int>>()
+        val queue: Queue<Pair<Int, Int>> = LinkedList()
         for ((i, n) in r.withIndex()) {
             if (S in n) {
                 queue.offer(1 to i)
