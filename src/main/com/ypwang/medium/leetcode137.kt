@@ -1,6 +1,6 @@
 package com.ypwang.medium
 
-class Solution {
+class Solution137 {
     fun singleNumber(nums: IntArray): Int {
         var one = 0
         var two = 0
