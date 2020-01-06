@@ -1,36 +1,25 @@
 package com.ypwang.hard
 
+import java.util.*
+
 class Solution786 {
     fun kthSmallestPrimeFraction(A: IntArray, K: Int): IntArray {
-        val merge = mutableSetOf<Pair<Int, Int>>()
-        merge.add(0 to A.lastIndex)
-
-        var count = 0
-        while (true) {
-            var min = 1.0
-            var pair: Pair<Int, Int> = 0 to 0
-
-            for (p in merge) {
-                val t = A[p.first].toDouble() / A[p.second]
-                if (t < min) {
-                    min = t
-                    pair = p
-                }
-            }
-
-            count++
-            if (count == K) return intArrayOf(A[pair.first], A[pair.second])
-
-            merge.remove(pair)
-
-            if (pair.first + 1 == pair.second) continue
-            merge.add(pair.first to pair.second - 1)
-            if (pair.second == A.lastIndex)
-                merge.add(pair.first + 1 to A.lastIndex)
+        A.sort()
+        val p = PriorityQueue<Triple<Int, Int, Double>>(Comparator{t1, t2 -> t1.third.compareTo(t2.third) })
+        for ((i, v) in A.withIndex()) {
+            p.add(Triple(i, A.lastIndex, v.toDouble() / A.last()))
         }
+
+        for (i in 1 until K) {
+            val (x, y, _) = p.poll()
+            if (y > 1) p.add(Triple(x, y-1, A[x].toDouble() / A[y-1]))
+        }
+
+        return p.poll().let { intArrayOf(A[it.first], A[it.second]) }
     }
 }
 
 fun main() {
-    println(Solution786().kthSmallestPrimeFraction(intArrayOf(1, 2, 3, 5), 3))
+    println(Solution786().kthSmallestPrimeFraction(intArrayOf(1, 2, 3, 5), 3).toList())
+    println(Solution786().kthSmallestPrimeFraction(intArrayOf(1, 7), 1).toList())
 }

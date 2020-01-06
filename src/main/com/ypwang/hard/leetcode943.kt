@@ -4,12 +4,10 @@ class Solution943 {
     fun shortestSuperstring(A: Array<String>): String {
         val overlap = Array(A.size){IntArray(A.size)}
 
-        for (i in 0 until A.size) {
-            val a = A[i]
-            for (j in 0 until A.size) {
+        for ((i, a) in A.withIndex()) {
+            for ((j, b) in A.withIndex()) {
                 if (i != j) {
-                    val b = A[j]
-                    for (k in minOf(a.length, b.length) downTo 0)
+                    for (k in minOf(a.length, b.length) downTo 1)
                         if (a.endsWith(b.substring(0, k))) {
                             overlap[i][j] = k
                             break
@@ -21,12 +19,12 @@ class Solution943 {
         val dp = Array(1 shl A.size) { IntArray(A.size) }
         val parent = Array(1 shl A.size) { IntArray(A.size){-1} }
         for (mask in 0 until (1 shl A.size)) {
-            for (bit in 0 until A.size)
-                if (mask shr bit and 1 > 0) {
-                    val pmask = mask xor (1 shl bit)
+            for (bit in A.indices)
+                if (mask and (1 shl bit) > 0) {
+                    val pmask = mask xor (1 shl bit)        // unset
                     if (pmask == 0) continue
-                    for (i in 0 until A.size)
-                        if (pmask shr i and 1 > 0) {
+                    for (i in A.indices)
+                        if (pmask and (1 shl i) > 0) {
                             // For each bit i in pmask, calculate the value
                             // if we ended with word i, then added word 'bit'.
                             val `val` = dp[pmask][i] + overlap[i][bit]
@@ -48,10 +46,7 @@ class Solution943 {
         var mask = (1 shl A.size) - 1
 
         // p: the last element of perm (last word written left to right)
-        var p = 0
-        for (j in 0 until A.size)
-            if (dp[mask][j] > dp[mask][p])
-                p = j
+        var p = dp[mask].withIndex().maxBy { it.value }!!.index
 
         // Follow parents down backwards path that retains maximum overlap
         while (p != -1) {
@@ -62,13 +57,13 @@ class Solution943 {
             p = p2
         }
 
-        // Reverse perm
-        perm.reverse()
-
         // Fill in remaining words not yet added
-        for (i in 0 until A.size)
+        for (i in A.indices)
             if (!seen[i])
                 perm[t++] = i
+
+        // Reverse perm
+        perm.reverse()
 
         // Reconstruct final answer given perm
         val ans = StringBuilder(A[perm[0]])
@@ -81,6 +76,7 @@ class Solution943 {
 }
 
 fun main() {
+    println(Solution943().shortestSuperstring(arrayOf("yeeiebcz","qbqhdytk","ygueikth","thqzyeei","gyygueikt","ikthqzyee")))
     println(Solution943().shortestSuperstring(arrayOf("alex","loves","leetcode")))
     println(Solution943().shortestSuperstring(arrayOf("catg","ctaagt","gcta","ttca","atgcatc")))
 }
