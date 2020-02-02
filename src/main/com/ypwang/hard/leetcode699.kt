@@ -2,77 +2,70 @@ package com.ypwang.hard
 
 class Solution699 {
     class SegmentTree(val N: Int) {
-        val H: Int
-        val tree = IntArray(2 * N)
-        val lazy = IntArray(N)
+        private val size: Int
+        private val tree: IntArray
+        private val lazy: IntArray
 
         init {
             var t = 1
-            while (1 shl t < N)
-                t++
+            while (t < N)
+                t = t shl 1
 
-            H = t
+            size = t
+            tree = IntArray(2 * size)
+            lazy = IntArray(2 * size)
         }
 
-        private fun apply(x: Int, `val`: Int) {
-            tree[x] = maxOf(tree[x], `val`)
-            if (x < N) lazy[x] = maxOf(lazy[x], `val`)
-        }
-
-        private fun pull(x: Int) {
-            var y = x
-            while (y > 1) {
-                y = x shr 1
-                tree[y] = maxOf(tree[y * 2], tree[y * 2 + 1])
-                tree[y] = maxOf(tree[y], lazy[y])
+        private fun update(idx: Int, lo: Int, hi: Int, i: Int, j: Int, `val`: Int) {
+            if (lo >= hi || lo >= j || hi <= i) return
+            tree[idx] = maxOf(tree[idx], `val`)
+            if (i <= lo && hi <= j) {
+                if (lo + 1 != hi) {
+                    lazy[2 * idx + 1] = `val`
+                    lazy[2 * idx + 2] = `val`
+                }
+                return
             }
+
+            val mid = (lo + hi) / 2
+            update(2 * idx + 1, lo, mid, i, j, `val`)
+            update(2 * idx + 2, mid, hi, i, j, `val`)
         }
 
-        private fun push(x: Int) {
-            for (h in H downTo 1) {
-                val y = x shr h
-                if (lazy[y] > 0) {
-                    apply(y * 2, lazy[y])
-                    apply(y * 2 + 1, lazy[y])
-                    lazy[y] = 0
+        fun update(L: Int, R: Int, h:Int) = update(0, 0, size, L, R, h)
+
+        private fun query(idx: Int, lo: Int, hi: Int, i: Int, j: Int): Int {
+            if (lo >= j || hi <= i) return 0
+
+            if (lazy[idx] != 0) {
+                tree[idx] = lazy[idx]
+                if (lo + 1 != hi) {
+                    lazy[2 * idx + 1] = lazy[idx]
+                    lazy[2 * idx + 2] = lazy[idx]
+                }
+
+                lazy[idx] = 0
+            }
+
+            if (i <= lo && hi <= j) return tree[idx]
+
+            val mid = (lo + hi) / 2
+            return when {
+                i >= mid -> query(2 * idx + 2, mid, hi, i, j)
+                j < mid -> query(2 * idx + 1, lo, mid, i, j)
+                else -> {
+                    val lq = query(2 * idx + 1, lo, mid, i, mid)
+                    val rq = query(2 * idx + 2, mid, hi, mid, j)
+                    maxOf(lq, rq)
                 }
             }
         }
 
-        fun update(L: Int, R: Int, h:Int) {
-            var l = L + N
-            var r = R + N
-            val l0 = l
-            val r0 = R
-            while (l <= r) {
-                if (l and 1 == 1) apply(l++, h)
-                if (r and 1 == 0) apply(r--, h)
-                l = l shr 1
-                r = r shr 1
-            }
-            pull(l0)
-            pull(r0)
-        }
-
-        fun query(L: Int, R: Int): Int {
-            var l = L + N
-            var r = R + N
-            var ans = 0
-            push(l)
-            push(r)
-            while (l <= r) {
-                if (l and 1 == 1) ans = maxOf(ans, tree[l++])
-                if (r and 1 == 0) ans = maxOf(ans, tree[r--])
-                l = l shr 1
-                r = r shr 1
-            }
-
-            return ans
-        }
+        fun query(L: Int, R: Int): Int = query(0, 0, size, L, R)
     }
 
     fun fallingSquares(positions: Array<IntArray>): List<Int> {
-        val xaxis = positions.flatMap { listOf(it[0], it[0] + it[1] - 1) }.toSet().toTypedArray()
+        val xaxis = positions.flatMap { listOf(it[0], it[0] + it[1]) }.toSet().toTypedArray()
         xaxis.sort()
         val reversed = xaxis.withIndex().map { it.value to it.index }.toMap()
 
@@ -81,7 +74,7 @@ class Solution699 {
 
         for ((i, pos) in positions.withIndex()) {
             val l = reversed[pos[0]]!!
-            val r = reversed[pos[0] + pos[1] - 1]!!
+            val r = reversed[pos[0] + pos[1]]!!
             val h = tree.query(l, r) + pos[1]
             tree.update(l, r, h)
             ans[i] = h
@@ -90,4 +83,9 @@ class Solution699 {
         }
         return ans.toList()
     }
+}
+
+fun main() {
+    println(Solution699().fallingSquares(arrayOf(intArrayOf(1,2), intArrayOf(2,3), intArrayOf(6,1))))
+    println(Solution699().fallingSquares(arrayOf(intArrayOf(100,100), intArrayOf(200,100))))
 }

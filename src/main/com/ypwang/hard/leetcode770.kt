@@ -4,33 +4,12 @@ import java.lang.StringBuilder
 import java.util.*
 
 class Solution770 {
-    interface Component {
-        fun output(): List<Element>
-    }
-
-    data class NumberComponent(val num: Int): Component {
-        override fun output(): List<Element> = listOf(Element(num))
-    }
-
-    data class MultipliedComponent(val sub: List<Component>): Component {
+    data class Element(val coefficient: Int = 1, val vars: List<String> = listOf()) {
         companion object {
-            fun reduce(parts: List<Component>): List<Element> {
-                if (parts.size == 1) return parts.flatMap { it.output() }
-                val left = reduce(parts.drop(1))
-                return parts.first().output().flatMap { e ->
-                    left.map { e.merge(it) }
-                }
-            }
+            fun reduce(parts: List<Element>): List<Element> =
+                parts.filter { it.coefficient != 0 }.groupBy { it.order() }.map { Element(it.value.sumBy { e -> e.coefficient }, it.value.first().vars) }.filter { it.coefficient != 0 }
         }
 
-        override fun output(): List<Element> = reduce(sub)
-    }
-
-    data class AddedComponent(val sub: List<Component>): Component {
-        override fun output(): List<Element> = sub.flatMap { it.output() }
-    }
-
-    data class Element(val coefficient: Int = 1, val vars: List<String> = listOf()): Component {
         fun merge(that: Element): Element = Element(this.coefficient * that.coefficient, this.vars + that.vars)
 
         fun calc(eval: Map<String, Int>): Element {
@@ -44,7 +23,38 @@ class Solution770 {
 
             return if (vars.size == this.vars.size) this else Element(coefficient, vars)
         }
-        override fun output(): List<Element> = listOf(this)
+
+        fun order(): String = vars.groupBy { it }.mapValues { it.value.size }.toList().sortedBy { it.first }.joinToString { "${it.first}${it.second}" }
+    }
+
+    interface Component {
+        fun output(): List<Element>
+    }
+
+    data class NumberComponent(val num: Int): Component {
+        override fun output(): List<Element> = Element.reduce(listOf(Element(num)))
+    }
+
+    data class VariableComponent(val `var`: String): Component {
+        override fun output(): List<Element> = listOf(Element(vars = listOf(`var`)))
+    }
+
+    data class MultipliedComponent(val sub: List<Component>): Component {
+        companion object {
+            fun reduce(parts: List<Component>): List<Element> {
+                if (parts.size == 1) return parts.flatMap { it.output() }
+                val left = reduce(parts.drop(1))
+                return Element.reduce(parts.first().output().flatMap { e ->
+                    left.map { e.merge(it) }
+                })
+            }
+        }
+
+        override fun output(): List<Element> = reduce(sub)
+    }
+
+    data class AddedComponent(val sub: List<Component>): Component {
+        override fun output(): List<Element> = Element.reduce(sub.flatMap { it.output() })
     }
 
     private fun readInt(q: Queue<Char>): Int {
@@ -63,59 +73,60 @@ class Solution770 {
         return sb.toString()
     }
 
-    // 递归下降法
-    private fun parseComposed(q: Queue<Char>): Component {
-        assert(q.poll() == '(')
+    private fun readMultiplied(q: Queue<Char>, positive: Boolean = true): Component {
         val components = mutableListOf<Component>()
-        val vars = mutableListOf<Component>()
-        var coefficient = 1
-        while (q.peek() != ')') {
+        if (!positive) components.add(NumberComponent(-1))
+        while (q.peek() !in setOf(')', '+', '-')) {
             val cur = q.peek()
             when {
-                cur.isDigit() -> vars.add(NumberComponent(coefficient * readInt(q)))
-                cur.isLetter() -> vars.add(Element(coefficient, listOf(readVar(q))))
-                cur in setOf('+', '-') -> {
+                cur == '*' -> q.poll()
+                cur == '(' -> components.add(readAdded(q))
+                cur.isDigit() -> components.add(NumberComponent(readInt(q)))
+                cur.isLetter() -> components.add(VariableComponent(readVar(q)))
+            }
+        }
+
+        return if (components.size == 1) components.single() else MultipliedComponent(components)
+    }
+
+    // 递归下降法
+    private fun readAdded(q: Queue<Char>): Component {
+        assert(q.poll() == '(')
+        val components = mutableListOf<Component>()
+        var p = true
+        while (q.peek() != ')') {
+            when (q.peek()) {
+                '+' -> {
                     q.poll()
-                    components.add(if (vars.size == 1) vars.first() else MultipliedComponent(vars.toList()))
-                    vars.clear()
-                    coefficient = if (cur == '+') 1 else -1
+                    p = true
                 }
-                cur == '*' -> {
+                '-' -> {
                     q.poll()
-                    coefficient = 1
+                    p = false
                 }
-                cur == '(' -> {
-                    val c = parseComposed(q)
-                    if (coefficient == 1) vars.add(c)
-                    else vars.add(MultipliedComponent(listOf(NumberComponent(-1), c)))
-                }
+                else -> components.add(readMultiplied(q, p))
             }
         }
         assert(q.poll() == ')')
-        components.add(if (vars.size == 1) vars.first() else MultipliedComponent(vars))
-        return if (components.size == 1) components.first() else AddedComponent(components)
+        return if (components.size == 1) components.single() else AddedComponent(components)
     }
 
     fun basicCalculatorIV(expression: String, evalvars: Array<String>, evalints: IntArray): List<String> {
         val eval = evalvars.zip(evalints.toList()).toMap()
-        return parseComposed(LinkedList("(${expression.filter { it != ' ' }})".toList()))
+        return readAdded(LinkedList("(${expression.filter { it != ' ' }})".toList()))
 //                .apply {
 //                    println(this)
 //                }
-                .output().map { it.calc(eval) }
-                .groupBy { it.vars.sorted() }.mapValues { it.value.sumBy { e -> e.coefficient } }.toList().sortedWith(kotlin.Comparator {
-                    p1, p2 -> if (p1.first.size != p2.first.size) p2.first.size - p1.first.size
-                    else p1.first.joinToString("").compareTo(p2.first.joinToString(""))}).map {
-                    when {
-                        it.second == 0 -> ""
-                        it.first.isEmpty() -> it.second.toString()
-                        else -> "${it.second}*${it.first.joinToString("*")}"
-                    }
-                }.filter { it.isNotEmpty() }
+                .output().map { it.calc(eval) }.let { Element.reduce(it) }.map { it.coefficient to it.vars.sorted() }
+                .sortedWith(Comparator {
+                    p1, p2 -> if (p1.second.size != p2.second.size) p2.second.size - p1.second.size
+                    else p1.second.joinToString("_").compareTo(p2.second.joinToString("_"))
+                }).map { "${it.first}${ if (it.second.isNotEmpty()) "*" else "" }${it.second.joinToString("*")}" }
     }
 }
 
 fun main() {
+    println(Solution770().basicCalculatorIV("a + b", arrayOf("a", "b"), intArrayOf(99, -99)))
     println(Solution770().basicCalculatorIV("(a + b) * (a - b) + (b * b) - (2 * a) * (4 * a)", arrayOf(), intArrayOf()))
     println(Solution770().basicCalculatorIV("a * b - b * a", arrayOf(), intArrayOf()))
     println(Solution770().basicCalculatorIV("e + 8 - a + 5", arrayOf("e"), intArrayOf(1)))
