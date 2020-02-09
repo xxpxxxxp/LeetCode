@@ -1,6 +1,6 @@
 package com.ypwang.hard
 
-class Skiplist() {
+class Skiplist {
     private data class Node(val `val`: Int, var next: Node? = null, var down: Node? = null)
 
     private val rand = java.util.Random()

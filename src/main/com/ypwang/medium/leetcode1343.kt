@@ -1,20 +1,19 @@
 package com.ypwang.medium
 
 class Solution1343 {
-    fun maxProduct(root: TreeNode?): Int {
-        var rst = 0L
-        var total = 0L
+    fun numOfSubarrays(arr: IntArray, k: Int, threshold: Int): Int {
+        val sum = k * threshold
+        var count = 0
+        var window = arr.take(k).sum()
 
-        fun solve(root: TreeNode?): Long {
-            if (root == null) return 0L
-            val s = root.`val` + solve(root.left) + solve(root.right)
-            rst = maxOf(rst, s * (total - s))
-            return s
+        if (window >= sum) count++
+
+        for (i in k until arr.size) {
+            window -= arr[i - k]
+            window += arr[i]
+            if (window >= sum) count++
         }
 
-        total = solve(root)
-        solve(root)
-
-        return (rst % 1000000007).toInt()
+        return count
     }
 }
