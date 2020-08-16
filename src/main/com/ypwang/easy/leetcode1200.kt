@@ -1,6 +1,6 @@
 package com.ypwang.easy
 
-class Solution {
+class Solution1200 {
     fun minimumAbsDifference(arr: IntArray): List<List<Int>> {
         arr.sort()
 
