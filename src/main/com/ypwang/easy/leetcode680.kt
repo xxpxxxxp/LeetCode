@@ -23,7 +23,7 @@ class Solution680 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution680().validPalindrome("deeee"))
     println(Solution680().validPalindrome("abca"))
 }

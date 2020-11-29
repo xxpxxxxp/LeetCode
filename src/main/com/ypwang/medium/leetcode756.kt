@@ -52,6 +52,6 @@ class Solution756 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution756().pyramidTransition("XYZ", listOf("XYD", "YZE", "DEA", "FFF")))
 }

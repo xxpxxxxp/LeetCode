@@ -23,6 +23,6 @@ class Solution926 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution926().minFlipsMonoIncr("010110"))
 }

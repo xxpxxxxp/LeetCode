@@ -18,7 +18,7 @@ class Solution781 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution781().numRabbits(intArrayOf(1,1,2)))
     println(Solution781().numRabbits(intArrayOf(10,10,10)))
     println(Solution781().numRabbits(intArrayOf()))

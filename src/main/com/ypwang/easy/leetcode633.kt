@@ -18,6 +18,6 @@ class Solution633 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution633().judgeSquareSum(2147482647))
 }

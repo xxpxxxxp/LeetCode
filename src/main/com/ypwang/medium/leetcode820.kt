@@ -35,6 +35,6 @@ class Solution820 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution820().minimumLengthEncoding(arrayOf("time", "me", "bell")))
 }

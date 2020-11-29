@@ -33,7 +33,7 @@ class Solution94 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val root = TreeNode(1)
     root.right = TreeNode(2)
     root.right!!.left = TreeNode(3)

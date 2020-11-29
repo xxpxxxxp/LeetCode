@@ -27,6 +27,6 @@ class Solution22 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution22().generateParenthesis(3))
 }

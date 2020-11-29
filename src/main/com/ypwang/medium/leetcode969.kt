@@ -24,6 +24,6 @@ class Solution969 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution969().pancakeSort(intArrayOf(3,2,4,1)))
 }

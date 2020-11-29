@@ -24,7 +24,7 @@ class Solution71 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution71().simplifyPath("/home/"))
     println(Solution71().simplifyPath("/../"))
     println(Solution71().simplifyPath("/home//foo/"))

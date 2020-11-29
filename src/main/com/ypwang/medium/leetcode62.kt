@@ -22,6 +22,6 @@ class Solution62 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution62().uniquePaths(3, 2))
 }

@@ -14,7 +14,7 @@ class Solution807 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution807().maxIncreaseKeepingSkyline(arrayOf(
             intArrayOf(3,0,8,4),
             intArrayOf(2,4,5,7),

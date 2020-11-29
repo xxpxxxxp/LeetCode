@@ -40,6 +40,6 @@ class Solution95 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution95().generateTrees(3).size)
 }

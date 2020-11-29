@@ -34,7 +34,7 @@ class Solution831 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution831().maskPII("LeetCode@LeetCode.com"))
     println(Solution831().maskPII("AB@qq.com"))
     println(Solution831().maskPII("1(234)567-890"))

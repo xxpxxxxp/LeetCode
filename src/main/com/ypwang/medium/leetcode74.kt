@@ -23,7 +23,7 @@ class Solution74 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution74().searchMatrix(arrayOf(
             intArrayOf(1,3,5,7), intArrayOf(10,11,16,20), intArrayOf(23,30,34,50)
     ), 3))

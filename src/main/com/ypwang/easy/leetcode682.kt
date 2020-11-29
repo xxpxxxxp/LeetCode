@@ -31,6 +31,6 @@ class Solution682 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution682().calPoints(arrayOf("5","-2","4","C","D","9","+","+")))
 }

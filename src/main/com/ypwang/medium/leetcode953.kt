@@ -30,6 +30,6 @@ class Solution953 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution953().isAlienSorted(arrayOf("word","world","row"), "worldabcefghijkmnpqstuvxyz"))
 }

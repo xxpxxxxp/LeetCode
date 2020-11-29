@@ -44,6 +44,6 @@ class Solution695 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution695().maxAreaOfIsland(arrayOf(intArrayOf(1,1,0,0,0), intArrayOf(1,1,0,0,0), intArrayOf(0,0,0,1,1), intArrayOf(0,0,0,1,1))))
 }

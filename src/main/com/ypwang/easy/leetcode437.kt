@@ -24,7 +24,7 @@ class Solution437 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val root = TreeNode(0)
     root.left = TreeNode(1)
     root.right = TreeNode(1)

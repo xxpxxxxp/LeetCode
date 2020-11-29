@@ -21,6 +21,6 @@ class Solution892 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution892().surfaceArea(arrayOf(intArrayOf(1,2), intArrayOf(3,4))))
 }

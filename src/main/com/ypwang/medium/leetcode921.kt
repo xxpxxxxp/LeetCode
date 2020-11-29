@@ -24,7 +24,7 @@ class Solution921 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution921().minAddToMakeValid("())"))
     println(Solution921().minAddToMakeValid("((("))
     println(Solution921().minAddToMakeValid("()"))

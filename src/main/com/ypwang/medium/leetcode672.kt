@@ -20,7 +20,7 @@ class Solution672 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     //println(Solution672().flipLights(1,1))
     println(Solution672().flipLights(2,1))
     println(Solution672().flipLights(3,1))

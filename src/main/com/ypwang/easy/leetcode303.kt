@@ -14,7 +14,7 @@ class NumArray(nums: IntArray) {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val n = NumArray(intArrayOf(-2, 0, 3, -5, 2, -1))
     println(n.sumRange(0, 2))
 }

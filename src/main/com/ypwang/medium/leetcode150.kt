@@ -36,6 +36,6 @@ class Solution150 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution150().evalRPN(arrayOf("4", "13", "5", "/", "+")))
 }

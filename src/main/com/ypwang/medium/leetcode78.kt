@@ -18,6 +18,6 @@ class Solution78 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution78().subsets(intArrayOf(1,2,3)))
 }

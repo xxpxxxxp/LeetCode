@@ -22,6 +22,6 @@ class Solution922 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution922().sortArrayByParityII(intArrayOf(4,2,5,7)).toList())
 }

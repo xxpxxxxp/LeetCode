@@ -18,6 +18,6 @@ class Solution832 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution832().flipAndInvertImage(arrayOf(intArrayOf(1,1,0), intArrayOf(1,0,1), intArrayOf(0,0,0))))
 }

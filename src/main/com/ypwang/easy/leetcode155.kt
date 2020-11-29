@@ -32,7 +32,7 @@ class MinStack {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val obj = MinStack()
     obj.push(-2)
     obj.push(0)

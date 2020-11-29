@@ -42,6 +42,6 @@ class Solution592 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution592().fractionAddition("1/3-1/2"))
 }

@@ -6,6 +6,6 @@ class Solution819 {
         }.maxBy { it.value }!!.key
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution819().mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", arrayOf("hit")))
 }

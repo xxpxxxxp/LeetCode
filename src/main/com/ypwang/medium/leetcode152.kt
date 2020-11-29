@@ -21,6 +21,6 @@ class Solution152 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution152().maxProduct(intArrayOf(-2, 0, -1)))
 }

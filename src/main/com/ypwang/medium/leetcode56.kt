@@ -23,7 +23,7 @@ class Solution56 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution56().merge(listOf(
             Interval(1,3),Interval(2,6),Interval(8,10),Interval(15,18)
     )))

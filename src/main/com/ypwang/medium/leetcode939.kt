@@ -29,7 +29,7 @@ class Solution939 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution939().minAreaRect(arrayOf(
             intArrayOf(1,1), intArrayOf(1,3), intArrayOf(3,1), intArrayOf(3,3), intArrayOf(4,1), intArrayOf(4,3)
     )))

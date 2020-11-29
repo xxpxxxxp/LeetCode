@@ -37,6 +37,6 @@ class Solution11 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution11().maxArea(intArrayOf(1,8,6,2,5,4,8,3,7)))
 }

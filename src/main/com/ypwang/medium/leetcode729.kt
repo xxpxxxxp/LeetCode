@@ -18,7 +18,7 @@ class MyCalendar {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val calender = MyCalendar()
     println(calender.book(10, 20))
     println(calender.book(15, 25))

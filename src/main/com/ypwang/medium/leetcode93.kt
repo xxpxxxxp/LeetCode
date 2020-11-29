@@ -38,6 +38,6 @@ class Solution93 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution93().restoreIpAddresses("010010"))
 }

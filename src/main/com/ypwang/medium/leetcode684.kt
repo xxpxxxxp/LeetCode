@@ -28,7 +28,7 @@ class Solution684 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution684().findRedundantConnection(
             arrayOf(
                     intArrayOf(1,2),

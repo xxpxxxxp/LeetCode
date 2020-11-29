@@ -37,7 +37,7 @@ class Solution210 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution210().findOrder(4, arrayOf(
             intArrayOf(1,0), intArrayOf(2,0), intArrayOf(3,1), intArrayOf(3,2)
     )).toList())

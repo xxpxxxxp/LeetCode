@@ -19,7 +19,7 @@ class Solution861 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution861().matrixScore(
             arrayOf(
                     intArrayOf(0,0,1,1),

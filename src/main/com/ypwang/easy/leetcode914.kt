@@ -19,6 +19,6 @@ class Solution914 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution914().hasGroupsSizeX(intArrayOf(1,1)))
 }

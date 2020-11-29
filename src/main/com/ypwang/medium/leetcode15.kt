@@ -54,6 +54,6 @@ class Solution15 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution15().threeSum(intArrayOf(-1, 0, 1, 2, -1, -4)))
 }

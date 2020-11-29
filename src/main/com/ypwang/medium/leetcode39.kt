@@ -22,6 +22,6 @@ class Solution39 {
     fun combinationSum(candidates: IntArray, target: Int): List<List<Int>> = combinationSum(candidates.toList(), target)
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution39().combinationSum(intArrayOf(1), 2))
 }

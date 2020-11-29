@@ -21,7 +21,7 @@ class RLEIterator(val A: IntArray) {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val a = RLEIterator(intArrayOf(3,8,0,9,2,5))
     println(a.next(2))
     println(a.next(1))

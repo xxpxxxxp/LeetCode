@@ -21,6 +21,6 @@ class Solution804 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution804().uniqueMorseRepresentations(arrayOf("gin", "zen", "gig", "msg")))
 }

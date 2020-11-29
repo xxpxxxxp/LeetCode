@@ -17,7 +17,7 @@ class Solution646 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution646().findLongestChain(
             arrayOf(
                     intArrayOf(1,2),

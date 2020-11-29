@@ -33,6 +33,6 @@ class Solution763 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution763().partitionLabels("ababcbacadefegdehijhklij"))
 }

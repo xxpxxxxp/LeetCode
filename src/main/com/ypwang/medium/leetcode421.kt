@@ -65,6 +65,6 @@ class Solution421 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution421().findMaximumXOR(intArrayOf(0)))
 }

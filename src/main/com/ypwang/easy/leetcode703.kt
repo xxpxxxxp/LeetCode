@@ -47,7 +47,7 @@ class KthLargest(k: Int, nums: IntArray) {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val k = KthLargest(3, intArrayOf(4, 5, 8, 2))
     for (i in intArrayOf(3,5,10,9,4))
         println(k.add(i))

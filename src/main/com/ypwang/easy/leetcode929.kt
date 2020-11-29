@@ -18,6 +18,6 @@ class Solution929 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution929().numUniqueEmails(arrayOf("test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com")))
 }

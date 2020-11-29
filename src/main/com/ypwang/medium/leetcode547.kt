@@ -24,7 +24,7 @@ class Solution547 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution547().findCircleNum(
             arrayOf(
                     intArrayOf(1,0,0,1),

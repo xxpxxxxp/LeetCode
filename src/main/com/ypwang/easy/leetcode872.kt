@@ -24,6 +24,6 @@ class Solution872 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution872().leafSimilar(null, null))
 }

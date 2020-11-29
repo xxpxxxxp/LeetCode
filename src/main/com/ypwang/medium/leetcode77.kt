@@ -8,6 +8,6 @@ class Solution77 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution77().combine(4, 2))
 }

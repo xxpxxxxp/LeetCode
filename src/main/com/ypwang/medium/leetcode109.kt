@@ -31,7 +31,7 @@ class Solution109 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val root= ListNode(-10)
     root.next = ListNode(-3)
     root.next!!.next = ListNode(0)

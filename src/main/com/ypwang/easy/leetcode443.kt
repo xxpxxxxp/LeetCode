@@ -43,6 +43,6 @@ class Solution443 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution443().compress(charArrayOf('a','a','a','b','b','a','a')))
 }

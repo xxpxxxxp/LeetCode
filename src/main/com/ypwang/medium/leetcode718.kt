@@ -46,6 +46,6 @@ class Solution718 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution718().findLength(intArrayOf(1,2,3,2,1), intArrayOf(3,2,1,4,7)))
 }

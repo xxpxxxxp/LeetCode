@@ -81,7 +81,7 @@ class Solution874 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution874().robotSim(intArrayOf(-2,-1,-2,3,7), arrayOf(
             intArrayOf(1,-3),intArrayOf(2,-3),intArrayOf(4,0),intArrayOf(-2,5),intArrayOf(-5,2),intArrayOf(0,0),intArrayOf(4,-4),intArrayOf(-2,-5),intArrayOf(-1,-2),intArrayOf(0,2)
     )))

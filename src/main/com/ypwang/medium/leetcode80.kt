@@ -33,6 +33,6 @@ class Solution80 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution80().removeDuplicates(intArrayOf(0,0,1,1,1,1,2,3,3)))
 }

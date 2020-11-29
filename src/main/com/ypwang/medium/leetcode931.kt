@@ -23,7 +23,7 @@ class Solution931 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution931().minFallingPathSum(
             arrayOf(
                     intArrayOf(1,2,3),

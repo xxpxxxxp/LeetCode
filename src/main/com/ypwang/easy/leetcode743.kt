@@ -34,7 +34,7 @@ class Solution743 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution743().networkDelayTime(
         arrayOf(intArrayOf(1,2,1)),
             2, 2)

@@ -16,6 +16,6 @@ class Solution852 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution852().peakIndexInMountainArray(intArrayOf(0,1,0)))
 }

@@ -13,7 +13,7 @@ class Solution835 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution835().largestOverlap(
             arrayOf(intArrayOf(1,1), intArrayOf(1,1)),
             arrayOf(intArrayOf(0,1), intArrayOf(1,0))

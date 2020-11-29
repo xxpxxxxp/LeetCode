@@ -19,7 +19,7 @@ class Solution937 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution937().reorderLogFiles(
             arrayOf("xo5azp0sy438 eppzlhfig b zqbplfyajpldf gumdyp mren",
                     "y urbltdl inymvoxqnmorxjvqnukhjzjuqbmfzgaofugpekkq",

@@ -43,6 +43,6 @@ class Solution925 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution925().isLongPressedName("alex", "aaleex"))
 }

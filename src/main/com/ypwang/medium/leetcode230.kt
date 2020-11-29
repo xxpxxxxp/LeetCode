@@ -30,7 +30,7 @@ class Solution230 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val root = TreeNode(1)
     root.right = TreeNode(2)
     println(Solution230().kthSmallest(root, 2))

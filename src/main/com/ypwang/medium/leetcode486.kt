@@ -14,6 +14,6 @@ class Solution486 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution486().PredictTheWinner(intArrayOf(1,5,2)))
 }

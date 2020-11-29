@@ -12,6 +12,6 @@ class Solution172 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution172().trailingZeroes(123154))
 }

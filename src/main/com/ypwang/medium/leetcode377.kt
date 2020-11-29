@@ -15,6 +15,6 @@ class Solution377 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution377().combinationSum4(intArrayOf(3,33,333), 10000))
 }

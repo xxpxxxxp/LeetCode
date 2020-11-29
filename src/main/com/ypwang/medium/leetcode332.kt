@@ -47,7 +47,7 @@ class Solution332 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution332().findItinerary(
             arrayOf(
                     arrayOf("JFK","KUL"),

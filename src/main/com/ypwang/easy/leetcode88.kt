@@ -23,7 +23,7 @@ class Solution88 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val nums1 = intArrayOf(1,2,3,0,0,0)
     Solution88().merge(nums1, 3, intArrayOf(2,5,6), 3)
     println(nums1.joinToString(","))

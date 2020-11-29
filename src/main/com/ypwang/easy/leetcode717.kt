@@ -19,6 +19,6 @@ class Solution717 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution717().isOneBitCharacter(intArrayOf(0, 0, 1, 0)))
 }

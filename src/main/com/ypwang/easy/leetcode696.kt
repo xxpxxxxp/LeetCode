@@ -13,6 +13,6 @@ class Solution696 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution696().countBinarySubstrings("10101"))
 }

@@ -55,7 +55,7 @@ class Solution79 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution79().exist(
             arrayOf(charArrayOf('A','B','C','E'),
                     charArrayOf('S','F','E','S'),

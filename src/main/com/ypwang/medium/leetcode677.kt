@@ -21,7 +21,7 @@ class MapSum {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val t = MapSum()
     t.insert("apple", 3)
     println(t.sum("apple"))

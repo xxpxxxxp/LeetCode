@@ -30,6 +30,6 @@ class Solution856 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution856().scoreOfParentheses("(()(()))"))
 }

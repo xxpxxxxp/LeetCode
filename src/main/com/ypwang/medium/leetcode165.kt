@@ -20,6 +20,6 @@ class Solution165 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution165().compareVersion("1.0", "1.0.0"))
 }

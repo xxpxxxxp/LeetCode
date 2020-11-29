@@ -45,6 +45,6 @@ class Solution43 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution43().multiply("123", "456"))
 }

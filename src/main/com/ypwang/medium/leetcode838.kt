@@ -37,6 +37,6 @@ class Solution838 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution838().pushDominoes("R.......L.R........."))
 }

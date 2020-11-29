@@ -21,7 +21,7 @@ class Solution3 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution3().lengthOfLongestSubstring("abba"))
     println(Solution3().lengthOfLongestSubstring("bbbbb"))
     println(Solution3().lengthOfLongestSubstring("pwwkew"))

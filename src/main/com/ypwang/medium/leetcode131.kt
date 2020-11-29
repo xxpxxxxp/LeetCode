@@ -37,6 +37,6 @@ class Solution131 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution131().partition("aab"))
 }

@@ -51,7 +51,7 @@ class Solution399 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution399().calcEquation(
             arrayOf(arrayOf("a", "b"), arrayOf("b", "c")), doubleArrayOf(2.0, 3.0),
             arrayOf(

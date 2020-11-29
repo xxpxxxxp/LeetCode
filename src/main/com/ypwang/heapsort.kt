@@ -42,6 +42,6 @@ fun heapsort(n: IntArray) {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(heapsort(intArrayOf(5,2,7,3,2,7,4,1,7,3,5,8,4,3,7)))
 }

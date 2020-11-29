@@ -22,6 +22,6 @@ class Solution811 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution811().subdomainVisits(arrayOf("9001 discuss.leetcode.com")))
 }

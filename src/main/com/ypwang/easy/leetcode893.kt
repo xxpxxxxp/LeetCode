@@ -7,6 +7,6 @@ class Solution893 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution893().numSpecialEquivGroups(arrayOf("abcd","cdab","adcb","cbad")))
 }

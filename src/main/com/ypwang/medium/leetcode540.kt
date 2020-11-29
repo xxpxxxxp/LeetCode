@@ -29,6 +29,6 @@ class Solution540 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution540().singleNonDuplicate(intArrayOf(1,1,2,3,3,4,4,8,8)))
 }

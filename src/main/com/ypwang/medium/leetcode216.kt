@@ -28,6 +28,6 @@ class Solution216 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution216().combinationSum3(3, 7))
 }

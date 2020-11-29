@@ -22,6 +22,6 @@ class Solution788 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution788().rotatedDigits(10))
 }

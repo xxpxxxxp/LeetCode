@@ -63,6 +63,6 @@ class Solution18 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution18().fourSum(intArrayOf(-3,-2,-1,0,0,1,2,3), 0))
 }

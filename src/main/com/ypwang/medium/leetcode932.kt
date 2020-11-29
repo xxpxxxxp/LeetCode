@@ -13,6 +13,6 @@ class Solution932 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution932().beautifulArray(4).toList())
 }

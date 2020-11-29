@@ -21,6 +21,6 @@ class Solution712 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution712().minimumDeleteSum("sea","eat"))
 }

@@ -27,6 +27,6 @@ class Solution784 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution784().letterCasePermutation("a1b1"))
 }

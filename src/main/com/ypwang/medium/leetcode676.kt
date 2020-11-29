@@ -32,7 +32,7 @@ class MagicDictionary {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val t = MagicDictionary()
     t.buildDict(arrayOf("hello", "leetcode"))
     println(t.search("hello"))

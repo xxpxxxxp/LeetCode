@@ -18,6 +18,6 @@ class Solution238 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution238().productExceptSelf(intArrayOf(1,2,3,4)).toList())
 }

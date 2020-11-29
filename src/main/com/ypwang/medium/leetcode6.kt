@@ -38,6 +38,6 @@ class Solution6 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution6().convert("PAYPALISHIRING", 1))
 }

@@ -16,7 +16,7 @@ class Solution452 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution452().findMinArrowShots(
             arrayOf(
                     intArrayOf(10,16),

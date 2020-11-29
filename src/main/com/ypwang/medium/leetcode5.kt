@@ -41,6 +41,6 @@ class Solution5 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution5().longestPalindrome("abcda"))
 }

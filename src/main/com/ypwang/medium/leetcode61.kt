@@ -38,7 +38,7 @@ class Solution61 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val root = ListNode(1)
     root.next = ListNode(2)
     root.next!!.next = ListNode(3)

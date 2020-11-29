@@ -33,6 +33,6 @@ class Solution833 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution833().findReplaceString("abcd", intArrayOf(0, 2), arrayOf("ab", "ec"), arrayOf("eee", "fff")))
 }

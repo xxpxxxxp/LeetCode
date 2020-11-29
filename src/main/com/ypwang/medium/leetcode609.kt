@@ -24,7 +24,7 @@ class Solution609 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution609().findDuplicate(arrayOf(
             "root/a 1.txt(FB) 2.txt(a)","root/c 3.txt(Ea)","root/c/d 4.txt(b)","root 4.txt(c)"
     )))

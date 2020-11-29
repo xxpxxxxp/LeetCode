@@ -51,6 +51,6 @@ class Solution16 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution16().threeSumClosest(intArrayOf(0,5,-1,-2,4,-1,0,-3,4,-5), 1))
 }

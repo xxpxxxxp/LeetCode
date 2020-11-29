@@ -53,6 +53,6 @@ class Solution754 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution754().reachNumber(3))
 }

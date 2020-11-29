@@ -26,6 +26,6 @@ class Solution47 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution47().permuteUnique(intArrayOf(1,1,2,2,3,3,4)).size)
 }

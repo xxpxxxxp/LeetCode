@@ -52,6 +52,6 @@ class Solution885 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution885().spiralMatrixIII(1, 4, 0, 0).map { it.toList() }.toList())
 }

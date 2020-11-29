@@ -19,6 +19,6 @@ class Solution883 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution883().projectionArea(arrayOf(intArrayOf(1,0), intArrayOf(0,2))))
 }

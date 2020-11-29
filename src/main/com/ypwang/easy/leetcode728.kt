@@ -23,6 +23,6 @@ class Solution728 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution728().selfDividingNumbers(47 ,85))
 }

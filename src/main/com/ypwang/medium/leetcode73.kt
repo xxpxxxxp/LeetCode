@@ -46,6 +46,6 @@ class Solution73 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution73().setZeroes(arrayOf(intArrayOf(1), intArrayOf(0))))
 }

@@ -18,7 +18,7 @@ class Solution406 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution406().reconstructQueue(
             arrayOf(
                     intArrayOf(7, 0), intArrayOf(4, 4), intArrayOf(7, 1), intArrayOf(5, 0), intArrayOf(6, 1),

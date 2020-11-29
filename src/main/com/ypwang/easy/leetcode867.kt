@@ -13,6 +13,6 @@ class Solution867 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution867().transpose(arrayOf(intArrayOf(1,0), intArrayOf(0,2))))
 }

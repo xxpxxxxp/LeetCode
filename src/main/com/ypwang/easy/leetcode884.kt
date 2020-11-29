@@ -6,6 +6,6 @@ class Solution884 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution884().uncommonFromSentences("s z z z s", "s z ejt"))
 }

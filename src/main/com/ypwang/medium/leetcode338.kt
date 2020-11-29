@@ -20,6 +20,6 @@ class Solution338 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution338().countBits(5).toList())
 }

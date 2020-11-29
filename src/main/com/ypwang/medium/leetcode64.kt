@@ -31,7 +31,7 @@ class Solution64 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution64().minPathSum(
             arrayOf(
                     intArrayOf(1,3,1), intArrayOf(1,5,1), intArrayOf(4,2,1)

@@ -39,6 +39,6 @@ class Solution34 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution34().searchRange(intArrayOf(7,10), 8).toList())
 }

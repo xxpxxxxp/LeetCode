@@ -25,6 +25,6 @@ class Solution105 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution105().buildTree(intArrayOf(3,9,20,15,7), intArrayOf(9,3,15,20,7)))
 }

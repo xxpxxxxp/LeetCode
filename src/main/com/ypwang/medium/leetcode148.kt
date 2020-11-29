@@ -42,7 +42,7 @@ class Solution148 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val root= ListNode(-1)
     root.next = ListNode(5)
     root.next!!.next = ListNode(3)

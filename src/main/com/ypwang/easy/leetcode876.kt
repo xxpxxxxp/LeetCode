@@ -14,6 +14,6 @@ class Solution876 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution876().middleNode(null))
 }

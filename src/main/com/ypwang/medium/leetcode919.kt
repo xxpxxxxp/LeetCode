@@ -63,7 +63,7 @@ class CBTInserter(val root: TreeNode?) {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val root = TreeNode(1)
     root.left = TreeNode(2)
     root.right = TreeNode(3)

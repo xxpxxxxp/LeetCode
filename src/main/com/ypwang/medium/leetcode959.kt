@@ -48,7 +48,7 @@ class Solution959 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution959().regionsBySlashes(arrayOf(
             " /",
             "/ "

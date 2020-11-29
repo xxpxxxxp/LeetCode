@@ -10,6 +10,6 @@ class Solution869 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution869().reorderedPowerOf2(16))
 }

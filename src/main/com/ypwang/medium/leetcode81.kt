@@ -32,6 +32,6 @@ class Solution81 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution81().search(intArrayOf(1,3,1,1,1), 3))
 }

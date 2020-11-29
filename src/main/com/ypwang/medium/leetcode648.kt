@@ -25,6 +25,6 @@ class Solution648 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution648().replaceWords(listOf("cat", "bat", "rat"), "the cattle was rattled by the battery"))
 }

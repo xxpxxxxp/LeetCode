@@ -22,7 +22,7 @@ class Solution797 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution797().allPathsSourceTarget(
             arrayOf(
                     intArrayOf(1,2),

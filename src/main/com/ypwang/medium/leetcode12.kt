@@ -73,6 +73,6 @@ class Solution12 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution12().intToRoman(1994))
 }

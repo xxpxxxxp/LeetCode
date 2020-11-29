@@ -39,7 +39,7 @@ class Solution2 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val l1 = ListNode(5)
     val l2 = ListNode(5)
 

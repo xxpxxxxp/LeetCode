@@ -27,7 +27,7 @@ class Solution120 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution120().minimumTotal(listOf(
             listOf(2),
             listOf(3,4),

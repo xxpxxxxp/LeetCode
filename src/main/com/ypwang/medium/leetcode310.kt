@@ -24,7 +24,7 @@ class Solution310 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution310().findMinHeightTrees(
             6, arrayOf(
             intArrayOf(0,3),

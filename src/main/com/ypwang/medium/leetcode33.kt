@@ -32,6 +32,6 @@ class Solution33 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution33().search(intArrayOf(4,5,6,7,0,1,2), 0))
 }

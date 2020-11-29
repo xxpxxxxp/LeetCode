@@ -16,6 +16,6 @@ class Solution657 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution657().judgeCircle("LL"))
 }

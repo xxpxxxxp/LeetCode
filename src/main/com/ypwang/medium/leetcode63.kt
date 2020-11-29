@@ -33,6 +33,6 @@ class Solution63 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution63().uniquePathsWithObstacles(arrayOf(intArrayOf(0, 0, 0), intArrayOf(0, 1, 0), intArrayOf(0, 0, 0))))
 }

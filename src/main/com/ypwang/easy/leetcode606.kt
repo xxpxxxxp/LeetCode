@@ -29,7 +29,7 @@ class Solution606 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val t = TreeNode(1)
     t.left = TreeNode(2)
     t.left!!.left = TreeNode(4)

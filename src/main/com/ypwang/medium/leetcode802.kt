@@ -32,7 +32,7 @@ class Solution802 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val input = File("C:\\Users\\yupen\\Desktop\\mememe.txt").readText()
     val array = input.substring(2, input.length - 2)    // remove [[ of begin, ]] of end
         .split("[").map { it.removeSuffix("],") }.map{

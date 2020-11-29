@@ -20,6 +20,6 @@ class Solution537 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution537().complexNumberMultiply("1+-1i", "1+-1i"))
 }

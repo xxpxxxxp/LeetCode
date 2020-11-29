@@ -18,6 +18,6 @@ class Solution40 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution40().combinationSum2(intArrayOf(2,5,2,1,2), 5))
 }

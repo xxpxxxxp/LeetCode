@@ -19,6 +19,6 @@ class Solution875 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution875().minEatingSpeed(intArrayOf(30,11,23,4,20), 5))
 }

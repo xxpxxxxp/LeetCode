@@ -32,6 +32,6 @@ class Solution29 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution29().divide(10, 3))
 }

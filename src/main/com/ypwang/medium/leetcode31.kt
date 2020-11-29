@@ -44,6 +44,6 @@ class Solution31 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution31().nextPermutation(intArrayOf(1,3,2)))
 }

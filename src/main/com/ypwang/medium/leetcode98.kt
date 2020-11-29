@@ -20,7 +20,7 @@ class Solution98 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val root = TreeNode(2)
     root.left = TreeNode(1)
     root.right = TreeNode(3)

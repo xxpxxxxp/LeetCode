@@ -18,6 +18,6 @@ class Solution669 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution669().trimBST(null, 1, 2))
 }

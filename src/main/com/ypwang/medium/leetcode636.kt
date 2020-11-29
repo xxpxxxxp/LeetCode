@@ -30,7 +30,7 @@ class Solution636 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution636().exclusiveTime(2, listOf("0:start:0",
             "1:start:2",
             "1:end:5",

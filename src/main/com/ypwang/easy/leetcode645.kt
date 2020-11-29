@@ -12,6 +12,6 @@ class Solution645 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     Solution645().findErrorNums(mutableListOf(4,6,4,7,2,5,1))
 }

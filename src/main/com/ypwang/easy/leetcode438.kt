@@ -27,6 +27,6 @@ class Solution438 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     Solution438().findAnagrams("cbaebabacd", "abc")
 }

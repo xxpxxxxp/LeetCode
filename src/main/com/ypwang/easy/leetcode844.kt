@@ -16,6 +16,6 @@ class Solution844 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution844().backspaceCompare("a#c", "b"))
 }

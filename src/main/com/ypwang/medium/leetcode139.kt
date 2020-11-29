@@ -51,6 +51,6 @@ class Solution139 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution139().wordBreak("catsandog", listOf("cats", "dog", "sand", "and", "cat")))
 }

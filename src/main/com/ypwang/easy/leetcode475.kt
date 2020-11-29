@@ -21,6 +21,6 @@ class Solution475 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution475().findRadius(intArrayOf(1,2,3), intArrayOf(2)))
 }

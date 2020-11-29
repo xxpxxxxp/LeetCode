@@ -38,7 +38,7 @@ class Solution234 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val head = ListNode(1)
     head.next = ListNode(2)
     head.next!!.next = ListNode(2)

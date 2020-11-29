@@ -23,6 +23,6 @@ class Solution91 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution91().numDecodings("10"))
 }

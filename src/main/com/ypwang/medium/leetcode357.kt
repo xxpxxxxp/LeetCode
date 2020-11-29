@@ -19,6 +19,6 @@ class Solution357 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution357().countNumbersWithUniqueDigits(2))
 }

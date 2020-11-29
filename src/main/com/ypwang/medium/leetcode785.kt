@@ -34,7 +34,7 @@ class Solution785 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution785().isBipartite(
 //            arrayOf(
 //                    intArrayOf(1,3),

@@ -20,6 +20,6 @@ class Solution769 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution769().maxChunksToSorted(intArrayOf(1,0,2,3,4)))
 }

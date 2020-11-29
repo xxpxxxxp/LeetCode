@@ -32,6 +32,6 @@ class Solution503 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution503().nextGreaterElements(intArrayOf(1,2,1)).toList())
 }

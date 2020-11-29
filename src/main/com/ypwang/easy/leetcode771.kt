@@ -12,6 +12,6 @@ private class Solution771 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution771().numJewelsInStones("aA", "aAAAbbBB"))
 }

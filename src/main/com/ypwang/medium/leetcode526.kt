@@ -26,6 +26,6 @@ class Solution526 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution526().countArrangement(4))
 }

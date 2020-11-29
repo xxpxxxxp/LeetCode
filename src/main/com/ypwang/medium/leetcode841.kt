@@ -16,7 +16,7 @@ class Solution841 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution841().canVisitAllRooms(listOf(
             listOf(1), listOf(2), listOf(3), listOf()
     )))

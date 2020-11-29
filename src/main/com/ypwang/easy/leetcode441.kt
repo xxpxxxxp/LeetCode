@@ -18,6 +18,6 @@ class Solution441 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution441().arrangeCoins(5))
 }

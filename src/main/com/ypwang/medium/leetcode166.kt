@@ -46,6 +46,6 @@ class Solution166 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution166().fractionToDecimal(-2147483648, 1))
 }

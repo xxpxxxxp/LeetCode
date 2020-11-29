@@ -21,6 +21,6 @@ class Solution686 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution686().repeatedStringMatch("a", "aa"))
 }

@@ -16,7 +16,7 @@ class Solution554 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution554().leastBricks(
             listOf(
                     listOf(1,2,2,1),

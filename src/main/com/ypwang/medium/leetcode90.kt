@@ -19,6 +19,6 @@ class Solution90 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution90().subsetsWithDup(intArrayOf(1,2,2)))
 }

@@ -44,7 +44,7 @@ class Solution725 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val root = ListNode(0)
     var tmp = root
     for (i in 1..3) {

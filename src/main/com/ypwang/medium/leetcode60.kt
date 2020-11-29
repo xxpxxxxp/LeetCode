@@ -23,6 +23,6 @@ class Solution60 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution60().getPermutation(4, 9))
 }

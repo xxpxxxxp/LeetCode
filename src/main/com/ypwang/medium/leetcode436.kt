@@ -25,7 +25,7 @@ class Solution436 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution436().findRightInterval(arrayOf(
             Interval(3, 4), Interval(2, 3), Interval(1, 2)
     )).toList())

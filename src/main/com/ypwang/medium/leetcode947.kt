@@ -25,7 +25,7 @@ class Solution947 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution947().removeStones(arrayOf(
             intArrayOf(0, 0), intArrayOf(0, 2), intArrayOf(1, 1), intArrayOf(2, 0), intArrayOf(2, 2)
     )))

@@ -27,6 +27,6 @@ class Solution821 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution821().shortestToChar("loveleetcode", 'e'))
 }

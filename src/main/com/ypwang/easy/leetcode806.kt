@@ -16,6 +16,6 @@ class Solution806 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution806().numberOfLines(intArrayOf(10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10), "abcdefghijklmnopqrstuvwxyz"))
 }

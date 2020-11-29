@@ -24,7 +24,7 @@ class Solution19 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val r = ListNode(1)
     r.next = ListNode(2)
     println(Solution19().removeNthFromEnd(r, 1))

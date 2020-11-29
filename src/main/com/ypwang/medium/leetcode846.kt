@@ -30,6 +30,6 @@ class Solution846 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution846().isNStraightHand(intArrayOf(5, 1), 1))
 }

@@ -19,6 +19,6 @@ class Solution67 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution67().addBinary("1", "11"))
 }

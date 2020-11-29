@@ -39,6 +39,6 @@ class Solution207 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution207().canFinish(2, arrayOf(intArrayOf(1,0))))
 }

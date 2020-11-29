@@ -19,7 +19,7 @@ class Solution48 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution48().rotate(arrayOf(
             intArrayOf(5,1,9,11),
             intArrayOf(2,4,8,10),

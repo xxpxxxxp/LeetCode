@@ -18,6 +18,6 @@ class Solution55 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     println(Solution55().canJump(intArrayOf(3,2,1,0,4)))
 }
