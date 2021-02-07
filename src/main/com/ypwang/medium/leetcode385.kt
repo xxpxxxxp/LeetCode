@@ -3,8 +3,8 @@ package com.ypwang.medium
 import java.util.*
 
 /**
-* // This is the interface that allows for creating nested lists.
-* // You should not implement it, or speculate about its implementation*/
+ * // This is the interface that allows for creating nested lists.
+ * // You should not implement it, or speculate about its implementation*/
 class NestedInteger {
     var int: Int? = null
     var inner: MutableList<NestedInteger>? = null
@@ -49,51 +49,54 @@ class NestedInteger {
 
 class Solution385 {
     fun deserialize(s: String): NestedInteger {
-        fun helper(q: Queue<Char>): NestedInteger {
-            fun readPositiveInt(q: Queue<Char>): Int {
-                var rst = 0
-                while (q.peek().isDigit()) {
-                    rst = rst * 10 + (q.poll() - '0')
-                }
-                return rst
+        fun readPositiveInt(q: Queue<Char>): Int {
+            var rst = 0
+            while (q.peek().isDigit()) {
+                rst = rst * 10 + (q.poll() - '0')
             }
-
-            fun readInt(q: Queue<Char>): Int {
-                return if (q.peek() == '-') {
-                    q.poll()
-                    -readPositiveInt(q)
-                } else {
-                    readPositiveInt(q)
-                }
-            }
-
-            val r = NestedInteger()
-            while (q.isNotEmpty()) {
-                val c = q.peek()
-                if (c.isDigit() || c == '-') {
-                    val n = NestedInteger()
-                    n.setInteger(readInt(q))
-                    r.add(n)
-                } else if (c == '[') {
-                    q.poll()    // pop
-                    r.add(helper(q))
-                }
-
-                when (q.peek()) {
-                    ',' -> q.poll()
-                    ']' -> {
-                        q.poll()
-                        return r
-                    }
-                }
-            }
-            return r
+            return rst
         }
 
-        return helper(LinkedList(("$s]").toList())).getList()!!.first()
+        fun readInt(q: Queue<Char>): Int {
+            return if (q.peek() == '-') {
+                q.poll()
+                -readPositiveInt(q)
+            } else {
+                readPositiveInt(q)
+            }
+        }
+
+        fun helper(q: Queue<Char>): NestedInteger {
+            val c = q.peek()
+            if (c.isDigit() || c == '-') {
+                val n = NestedInteger()
+                n.setInteger(readInt(q))
+                return n
+            } else if (c == '[') {
+                q.poll()    // pop
+                val r = NestedInteger()
+                while (q.isNotEmpty()) {
+                    when (q.peek()) {
+                        ',' -> q.poll()
+                        ']' -> {
+                            q.poll()
+                            return r
+                        }
+                        else -> r.add(helper(q))
+                    }
+                }
+
+                return r
+            }
+
+            throw Exception("cannot happen")
+        }
+
+        return helper(LinkedList(("[$s]").toList())).getList()!!.first()
     }
 }
 
 fun main() {
+    println(Solution385().deserialize("[]"))
     println(Solution385().deserialize("-1"))
 }
