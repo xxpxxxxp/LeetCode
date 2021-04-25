@@ -1,5 +1,5 @@
 plugins {
-    id "org.jetbrains.kotlin.jvm" version "1.4.10"
+    id "org.jetbrains.kotlin.jvm" version "1.4.32"
 }
 
 group 'com.ypwang'
@@ -18,7 +18,7 @@ sourceSets {
 }
 
 dependencies {
-    compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '1.4.10'
+    compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '1.4.32'
     testCompile "junit:junit:4.+"
 }
 
