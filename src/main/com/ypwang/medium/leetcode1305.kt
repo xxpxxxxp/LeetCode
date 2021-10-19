@@ -1,5 +1,7 @@
 package com.ypwang.medium
 
+import com.ypwang.TreeNode
+
 import java.util.*
 
 class Solution1305 {

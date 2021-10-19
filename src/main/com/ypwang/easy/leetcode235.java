@@ -1,16 +1,11 @@
 package com.ypwang.easy;
 
+import com.ypwang.TreeNode;
+
 import java.util.Iterator;
 import java.util.Stack;
 
 class Solution235 {
-    static class TreeNode
-    {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-    }
 
     public Boolean findPath(TreeNode root, TreeNode p, Stack<TreeNode> path) {
         if (root != null) {

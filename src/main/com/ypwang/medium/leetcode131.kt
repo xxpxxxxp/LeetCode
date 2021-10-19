@@ -1,5 +1,7 @@
 package com.ypwang.medium
 
+import com.ypwang.TreeNode
+
 class Solution131 {
     fun partition(s: String): List<List<String>> {
         fun isPalindrome(i: Int, j: Int): Boolean {

@@ -1,5 +1,7 @@
 package com.ypwang.medium
 
+import com.ypwang.TreeNode
+
 class Solution1339 {
     fun maxProduct(root: TreeNode?): Int {
         var rst = 0L

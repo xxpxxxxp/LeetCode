@@ -1,11 +1,8 @@
 package com.ypwang.medium
 
-class Solution450 {
-    class TreeNode(var `val`: Int) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
-    }
+import com.ypwang.TreeNode
 
+class Solution450 {
     private fun successor(root: TreeNode): Int {
         var r = root.right!!
         while (r.left != null) r = r.left!!

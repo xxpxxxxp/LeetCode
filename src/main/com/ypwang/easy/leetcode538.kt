@@ -1,12 +1,9 @@
 package com.ypwang.easy
 
-class TreeNode1(var `val`: Int = 0) {
-    var left: TreeNode1? = null
-    var right: TreeNode1? = null
-}
+import com.ypwang.TreeNode
 
 class Solution538 {
-    fun helper(root: TreeNode1?, sum: Int): Int {
+    fun helper(root: TreeNode?, sum: Int): Int {
         if (root == null) {
             return sum
         }
@@ -16,7 +13,7 @@ class Solution538 {
         return helper(root.left, root.`val`)
     }
 
-    fun convertBST(root: TreeNode1?): TreeNode1? {
+    fun convertBST(root: TreeNode?): TreeNode? {
         helper(root, 0)
         return root
     }

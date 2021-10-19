@@ -1,5 +1,7 @@
 package com.ypwang.medium
 
+import com.ypwang.TreeNode
+
 class Solution1302 {
     fun deepestLeavesSum(root: TreeNode?): Int {
         if (root == null) return 0

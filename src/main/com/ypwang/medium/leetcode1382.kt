@@ -1,5 +1,7 @@
 package com.ypwang.medium
 
+import com.ypwang.TreeNode
+
 class Solution1382 {
     fun balanceBST(root: TreeNode?): TreeNode? {
         val sorted = mutableListOf<Int>()

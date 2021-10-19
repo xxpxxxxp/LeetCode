@@ -1,5 +1,7 @@
 package com.ypwang.medium
 
+import com.ypwang.TreeNode
+
 class Solution1145 {
     private fun findX(root: TreeNode?, x: Int): TreeNode? {
         if (root == null) return null

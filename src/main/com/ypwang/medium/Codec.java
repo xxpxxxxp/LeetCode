@@ -30,9 +30,9 @@ public class Codec {
                 }
 
                 TreeNode cur = queue.poll();
-                sb.append(cur.getVal());
-                queue.add(cur.getLeft());
-                queue.add(cur.getRight());
+                sb.append(cur.val);
+                queue.add(cur.left);
+                queue.add(cur.right);
                 sb.append(';');
             }
         }
@@ -66,8 +66,8 @@ public class Codec {
             if (!its.isEmpty()) {
                 Integer i = its.poll();
                 if (i != null) {
-                    cur.setLeft(new TreeNode(i));
-                    fetch.add(cur.getRight());
+                    cur.left = new TreeNode(i);
+                    fetch.add(cur.right);
                 }
             } else {
                 break;
@@ -76,8 +76,8 @@ public class Codec {
             if (!its.isEmpty()) {
                 Integer i = its.poll();
                 if (i != null) {
-                    cur.setLeft(new TreeNode(i));
-                    fetch.add(cur.getRight());
+                    cur.left = new TreeNode(i);
+                    fetch.add(cur.right);
                 }
             } else {
                 break;

@@ -1,5 +1,7 @@
 package com.ypwang.medium
 
+import com.ypwang.TreeNode
+
 class Solution1457 {
     private fun helper(node: TreeNode, count: IntArray): Int {
         count[node.`val`]++

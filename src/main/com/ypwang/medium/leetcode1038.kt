@@ -1,6 +1,6 @@
 package com.ypwang.medium
 
-class TreeNode(var `val`: Int, var left: TreeNode? = null, var right: TreeNode? = null)
+import com.ypwang.TreeNode
 
 class Solution1038 {
     private fun sum(root: TreeNode?, pre: Int): Int {

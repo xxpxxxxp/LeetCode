@@ -1,13 +1,8 @@
 package com.ypwang.medium;
 
-import java.util.Stack;
+import com.ypwang.TreeNode;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
+import java.util.Stack;
 
 class State {
     public State(TreeNode r) {

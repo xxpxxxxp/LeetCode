@@ -1,5 +1,7 @@
 package com.ypwang.medium
 
+import com.ypwang.TreeNode
+
 class Solution1609 {
     private fun helper(nodes: List<TreeNode>, odd: Boolean): Boolean {
         if (nodes.isEmpty()) return true

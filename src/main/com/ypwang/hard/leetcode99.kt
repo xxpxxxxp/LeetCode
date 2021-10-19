@@ -1,11 +1,8 @@
 package com.ypwang.hard
 
-class Solution99 {
-    class TreeNode(var `val`: Int) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
-    }
+import com.ypwang.TreeNode
 
+class Solution99 {
     fun recoverTree(root: TreeNode?) {
         var l: TreeNode? = null
         fun left(t: TreeNode?): TreeNode? {
@@ -36,9 +33,9 @@ class Solution99 {
 }
 
 fun main() {
-    val root = Solution99.TreeNode(3)
-    root.left = Solution99.TreeNode(1)
-    root.right = Solution99.TreeNode(4)
-    root.right!!.left = Solution99.TreeNode(2)
+    val root = TreeNode(3)
+    root.left = TreeNode(1)
+    root.right = TreeNode(4)
+    root.right!!.left = TreeNode(2)
     Solution99().recoverTree(root)
 }

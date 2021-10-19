@@ -1,5 +1,7 @@
 package com.ypwang.medium
 
+import com.ypwang.TreeNode
+
 class Solution1315 {
     fun sumEvenGrandparent(root: TreeNode?): Int {
         var rst = 0

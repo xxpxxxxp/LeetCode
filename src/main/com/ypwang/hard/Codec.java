@@ -1,5 +1,7 @@
 package com.ypwang.hard;
 
+import com.ypwang.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.stream.Collectors;
@@ -9,13 +11,6 @@ import java.util.stream.Collectors;
 
  */
 public class Codec {
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-    }
-
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
         if (root == null) return "";

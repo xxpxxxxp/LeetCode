@@ -1,6 +1,7 @@
 package com.ypwang.medium
 
 import com.ypwang.ListNode
+import com.ypwang.TreeNode
 
 class Solution1367 {
     private fun helper(heads: List<ListNode?>, head: ListNode?, root: TreeNode?): Boolean {

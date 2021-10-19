@@ -23,12 +23,12 @@ public class BSTIterator {
     public int next() {
         while (cur != null) {
             s.push(cur);
-            cur = cur.getLeft();
+            cur = cur.left;
         }
 
         TreeNode x = s.pop();
-        cur = x.getRight();
-        return x.getVal();
+        cur = x.right;
+        return x.val;
     }
 
     public static void main(String[] args) {

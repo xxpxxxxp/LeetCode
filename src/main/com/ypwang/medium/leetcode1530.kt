@@ -1,5 +1,7 @@
 package com.ypwang.medium
 
+import com.ypwang.TreeNode
+
 class Solution1530 {
     fun countPairs(root: TreeNode?, distance: Int): Int {
         fun dfs(node: TreeNode): Pair<Int, IntArray> {

@@ -1,5 +1,7 @@
 package com.ypwang.medium
 
+import com.ypwang.TreeNode
+
 class Solution1080 {
     private fun helper(sum: Int, cur: TreeNode, limit: Int): Boolean {
         if (cur.left == null && cur.right == null) return sum + cur.`val` < limit

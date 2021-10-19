@@ -1,5 +1,7 @@
 package com.ypwang.medium
 
+import com.ypwang.TreeNode
+
 class Solution1448 {
     private fun helper(node: TreeNode?, preMax: Int): Int {
         if (node == null) return 0

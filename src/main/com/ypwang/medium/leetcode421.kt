@@ -1,11 +1,8 @@
 package com.ypwang.medium
 
-class Solution421 {
-    class TreeNode(val bit: Int) {
-        var left0: TreeNode? = null
-        var right1: TreeNode? = null
-    }
+import com.ypwang.TreeNode
 
+class Solution421 {
     fun findMaximumXOR(nums: IntArray): Int {
         if (nums.size < 2) {
             return 0
@@ -18,15 +15,15 @@ class Solution421 {
             var bit = 31
             while (bit >= 0) {
                 if ((1 shl bit) and num == 0) {
-                    if (r.left0 == null) {
-                        r.left0 = TreeNode(bit)
+                    if (r.left == null) {
+                        r.left = TreeNode(bit)
                     }
-                    r = r.left0!!
+                    r = r.left!!
                 } else {
-                    if (r.right1 == null) {
-                        r.right1 = TreeNode(bit)
+                    if (r.right == null) {
+                        r.right = TreeNode(bit)
                     }
-                    r = r.right1!!
+                    r = r.right!!
                 }
                 bit --
             }
@@ -34,8 +31,8 @@ class Solution421 {
 
         nums.forEach { build(it) }
 
-        while (root.right1 == null) {
-            root = root.left0!!
+        while (root.right == null) {
+            root = root.left!!
         }
 
         fun find(num: Int): Int {
@@ -43,25 +40,25 @@ class Solution421 {
             var final = 0
 
             while (r != null) {
-                if (r!!.left0 == null && r!!.right1 == null) {
+                if (r!!.left == null && r!!.right == null) {
                     return final
                 }
 
-                val bit = r!!.bit - 1
+                val bit = r!!.`val` - 1
                 val bitmask = num and (1 shl bit) == 0
 
-                if (r!!.left0 == null || (r!!.right1 != null && bitmask)) {
-                    r = r!!.right1
+                if (r!!.left == null || (r!!.right != null && bitmask)) {
+                    r = r!!.right
                     final = final or (1 shl bit)
                 } else {
-                    r = r!!.left0
+                    r = r!!.left
                 }
             }
 
             return final
         }
 
-        return nums.filter { it and (1 shl (root.bit - 1)) != 0 }.map { find(it) xor it }.max()!!
+        return nums.filter { it and (1 shl (root.`val` - 1)) != 0 }.map { find(it) xor it }.max()!!
     }
 }
 
