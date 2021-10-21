@@ -5,8 +5,8 @@ class Solution659 {
         val count = nums.groupBy { it }.mapValues { it.value.size }.toMutableMap()
         val tail = mutableMapOf<Int, Int>()
 
-        val start = count.minBy { it.key }!!.key
-        val end = count.maxBy { it.key }!!.key
+        val start = count.minByOrNull { it.key }!!.key
+        val end = count.maxByOrNull { it.key }!!.key
 
         for (i in start..end) {
             if (count.getOrDefault(i, 0) == 0) continue

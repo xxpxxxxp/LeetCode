@@ -19,7 +19,7 @@ class Solution931 {
             rst = col
         }
 
-        return rst.min()!!
+        return rst.minOrNull()!!
     }
 }
 

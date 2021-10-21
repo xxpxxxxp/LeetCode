@@ -45,7 +45,7 @@ class Solution1477 {
             }
         }
 
-        return left.drop(1).zip(right.toList()).filter { it.first != Int.MAX_VALUE && it.second != Int.MAX_VALUE }.map { it.first + it.second }.min() ?: -1
+        return left.drop(1).zip(right.toList()).filter { it.first != Int.MAX_VALUE && it.second != Int.MAX_VALUE }.map { it.first + it.second }.minOrNull() ?: -1
     }
 }
 

@@ -22,7 +22,7 @@ class Solution1737 {
             sumb += cb[i]
         }
 
-        val way3 = ca.zip(cb).map { it.first + it.second }.max()!!
+        val way3 = ca.zip(cb).map { it.first + it.second }.maxOrNull()!!
         return minOf(way1, way2, a.length + b.length - way3)
     }
 }

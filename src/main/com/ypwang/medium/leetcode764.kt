@@ -45,7 +45,7 @@ class Solution764 {
             }
         }
 
-        return mins.max()!!
+        return mins.maxOrNull()!!
     }
 }
 

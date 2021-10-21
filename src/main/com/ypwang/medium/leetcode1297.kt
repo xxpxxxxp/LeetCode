@@ -17,7 +17,7 @@ class Solution1297 {
             if(i - start + 1 == minSize && window.size <= maxLetters)
                 s.substring(start, start + minSize).let { occurrence[it] = occurrence.getOrDefault(it, 0) + 1 }
         }
-        return occurrence.values.max() ?: 0
+        return occurrence.values.maxOrNull() ?: 0
     }
 }
 

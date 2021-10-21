@@ -46,7 +46,7 @@ class Solution1632 {
                 .map { (id, idx) -> matrix[id/n][id%n] to idx }
                 .toList()
                 .sortedBy { it.first }) {
-            val max = idx.map { rst[it/n][it%n] }.max()!!
+            val max = idx.map { rst[it/n][it%n] }.maxOrNull()!!
             idx.forEach {
                 val i = it/n
                 val j = it%n

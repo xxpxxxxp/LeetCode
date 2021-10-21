@@ -18,6 +18,6 @@ class Solution1072 {
             else count[b] = count.getOrDefault(b, 0) + 1
         }
 
-        return count.values.max()!!
+        return count.values.maxOrNull()!!
     }
 }

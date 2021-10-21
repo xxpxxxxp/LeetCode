@@ -16,7 +16,7 @@ class Solution514 {
             dp = next
         }
 
-        return dp.values.min()!! + key.length
+        return dp.values.minOrNull()!! + key.length
     }
 }
 

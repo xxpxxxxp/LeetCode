@@ -3,7 +3,7 @@ package com.ypwang.medium
 class Solution1824 {
     fun minSideJumps(obstacles: IntArray): Int =
         obstacles.drop(1).fold(intArrayOf(1,0,1)) { p, o ->
-            val min = p.withIndex().filter { it.index != o - 1 }.minBy{ it.value }!!.index
+            val min = p.withIndex().filter { it.index != o - 1 }.minByOrNull{ it.value }!!.index
             val v = p[min]
             for (i in 0..2) {
                 if (i != min) {
@@ -14,7 +14,7 @@ class Solution1824 {
                 p[o-1] = Int.MAX_VALUE
 
             p
-        }.min()!!
+        }.minOrNull()!!
 }
 
 fun main() {

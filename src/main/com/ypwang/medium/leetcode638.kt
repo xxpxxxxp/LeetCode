@@ -18,7 +18,7 @@ class Solution638 {
                 }
             }
 
-            mem[n] = rst.min()!!
+            mem[n] = rst.minOrNull()!!
             return mem[n]!!
         }
 

@@ -9,7 +9,7 @@ class Solution403 {
         for (i in 1 until stones.size) {
             if (i in mapping) {
                 val available = mapping[i]!!
-                val max = available.max()!!
+                val max = available.maxOrNull()!!
 
                 var j = i+1
                 while (j < stones.size && stones[j] - stones[i] <= max+1) {

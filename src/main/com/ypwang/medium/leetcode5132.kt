@@ -38,7 +38,7 @@ class Solution5132 {
             }
         }
 
-        return rst.map { it.min()!! }.map { if (it == Int.MAX_VALUE) -1 else it }.toIntArray()
+        return rst.map { it.minOrNull()!! }.map { if (it == Int.MAX_VALUE) -1 else it }.toIntArray()
     }
 }
 

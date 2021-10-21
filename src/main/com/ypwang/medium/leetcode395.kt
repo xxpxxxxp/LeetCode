@@ -7,7 +7,7 @@ class Solution395 {
             return s.length
 
         val splits = c.filter { it.value < k }.map { it.key.toString() }.toTypedArray()
-        return s.split(*splits).map { longestSubstring(it, k) }.max() ?: 0
+        return s.split(*splits).map { longestSubstring(it, k) }.maxOrNull() ?: 0
     }
 }
 

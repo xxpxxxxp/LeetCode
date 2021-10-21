@@ -9,6 +9,6 @@ class Solution1218 {
             if (e !in cur || cur[e]!! < c) cur[e] = c
         }
 
-        return cur.values.max()!!
+        return cur.values.maxOrNull()!!
     }
 }

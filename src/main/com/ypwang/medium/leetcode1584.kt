@@ -21,7 +21,7 @@ class Solution1584 {
 
         update(idx)
         while (seen.size != points.size) {
-            val next = dis.withIndex().minBy{ it.value }!!
+            val next = dis.withIndex().minByOrNull{ it.value }!!
             rst += next.value
             idx = next.index
             update(idx)

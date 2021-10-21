@@ -12,7 +12,7 @@ class Solution554 {
             }
         }
 
-        return if (rst.isEmpty()) wall.size else wall.size - rst.maxBy { it.value }!!.value
+        return if (rst.isEmpty()) wall.size else wall.size - rst.maxByOrNull { it.value }!!.value
     }
 }
 

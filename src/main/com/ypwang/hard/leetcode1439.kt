@@ -16,5 +16,5 @@ class Solution1439 {
             }
 
             heap
-        }.max()!!
+        }.maxOrNull()!!
 }

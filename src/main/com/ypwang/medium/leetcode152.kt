@@ -10,7 +10,7 @@ class Solution152 {
 
         for (i in 1 until nums.size) {
             val t = intArrayOf(nums[i], nums[i] * initial.first, nums[i] * initial.second)
-            initial = Pair(t.min()!!, t.max()!!)
+            initial = Pair(t.minOrNull()!!, t.maxOrNull()!!)
 
             if (initial.second > max) {
                 max = initial.second

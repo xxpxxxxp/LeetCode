@@ -58,7 +58,7 @@ class Solution421 {
             return final
         }
 
-        return nums.filter { it and (1 shl (root.`val` - 1)) != 0 }.map { find(it) xor it }.max()!!
+        return nums.filter { it and (1 shl (root.`val` - 1)) != 0 }.map { find(it) xor it }.maxOrNull()!!
     }
 }
 

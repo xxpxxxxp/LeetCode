@@ -33,7 +33,7 @@ class Solution1671 {
             }
         }
 
-        return nums.size - 1 - (pos.zip(rev).filter { it.first > 0 && it.second > 0 }.map { it.first + it.second }.max() ?: 0)
+        return nums.size - 1 - (pos.zip(rev).filter { it.first > 0 && it.second > 0 }.map { it.first + it.second }.maxOrNull() ?: 0)
     }
 }
 

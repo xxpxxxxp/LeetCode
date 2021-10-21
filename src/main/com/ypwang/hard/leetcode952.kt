@@ -54,7 +54,7 @@ class Solution952 {
             count[dsus[reverse[factor.first()]!!].parent().idx]++
         }
 
-        return count.max()!!
+        return count.maxOrNull()!!
     }
 }
 

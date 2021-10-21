@@ -13,7 +13,7 @@ class Solution861 {
         var sum = 0
         val size = A[0].size
         for (j in 0 until size) {
-            sum += (1 shl (size - 1 - j)) * (0 until A.size).map { A[it][j] }.groupBy { it }.map { it.value.size }.max()!!
+            sum += (1 shl (size - 1 - j)) * (0 until A.size).map { A[it][j] }.groupBy { it }.map { it.value.size }.maxOrNull()!!
         }
         return sum
     }

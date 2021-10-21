@@ -5,7 +5,7 @@ class Solution1779 {
         points.withIndex()
             .filter { (_, pos) -> pos[0] == x || pos[1] == y }
             .map { (idx, pos) -> idx to Math.abs(pos[0] - x) + Math.abs(pos[1] - y) }
-            .minBy { it.second }
+            .minByOrNull { it.second }
             ?.first
             ?: -1
 }

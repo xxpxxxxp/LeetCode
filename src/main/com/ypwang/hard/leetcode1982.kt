@@ -3,7 +3,7 @@ package com.ypwang.hard
 class Solution1982 {
     private fun helper(n: Int, sums: List<Int>): List<Int> {
         if (n == 1 && sums.contains(0))
-            return listOf(sums.maxBy { Math.abs(it) }!!)
+            return listOf(sums.maxByOrNull { Math.abs(it) }!!)
 
         val d = sums[1] - sums[0]
         val candidates = mutableListOf<List<Int>>()
@@ -33,7 +33,7 @@ class Solution1982 {
             candidates.add(listOf(d*dr) + helper(n-1, next))
         }
 
-        return candidates.maxBy { it.size }!!
+        return candidates.maxByOrNull { it.size }!!
     }
 
     fun recoverArray(n: Int, sums: IntArray): IntArray {

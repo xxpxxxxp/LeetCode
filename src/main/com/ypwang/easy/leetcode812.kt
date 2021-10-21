@@ -21,7 +21,7 @@ class Solution812 {
         return l.asSequence().filter{ it.size == 3 }.map {
             val (i, j, k) = it.toList()
             heron(points[i], points[j], points[k])
-        }.filter { !it.isNaN() }.max()!!
+        }.filter { !it.isNaN() }.maxOrNull()!!
     }
 }
 

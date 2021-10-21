@@ -22,7 +22,7 @@ class Solution673 {
             }
         }
 
-        val max = dpLen.max()!!
+        val max = dpLen.maxOrNull()!!
         return dpLen.withIndex().filter { it.value == max }.sumBy { dpCount[it.index] }
     }
 }

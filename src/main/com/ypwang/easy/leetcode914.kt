@@ -6,7 +6,7 @@ class Solution914 {
         if (d.size < 2) {
             return !d.isEmpty() && d[0] > 1
         }
-        val min = d.min()!!
+        val min = d.minOrNull()!!
         var primitives = (2..min).toList()
         var i = 0
         while (i < primitives.size) {

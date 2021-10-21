@@ -2,7 +2,7 @@ package com.ypwang.hard
 
 class Solution1998 {
     fun gcdSort(nums: IntArray): Boolean {
-        val max = nums.max()!!
+        val max = nums.maxOrNull()!!
         val dsu = IntArray(max+1){ it }
 
         fun root(i: Int): Int {

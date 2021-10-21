@@ -4,7 +4,7 @@ class Solution763 {
     fun partitionLabels(S: String): List<Int> {
         val indexs = S.withIndex().groupBy { it.value }
                 .mapValues { it.value.map { kv -> kv.index } }
-                .mapValues { Pair(it.value.min()!!, it.value.max()!!) }
+                .mapValues { Pair(it.value.minOrNull()!!, it.value.maxOrNull()!!) }
 
         val rst = mutableListOf<Int>()
 
@@ -14,7 +14,7 @@ class Solution763 {
             var curmax = indexs[S[start]]!!.second
             var next = start
             while (true) {
-                val nextmax = S.substring(next, curmax+1).toSet().map { indexs[it]!!.second }.max()!!
+                val nextmax = S.substring(next, curmax+1).toSet().map { indexs[it]!!.second }.maxOrNull()!!
                 if (nextmax == curmax) {
                     rst.add(curmax - start + 1)
                     break

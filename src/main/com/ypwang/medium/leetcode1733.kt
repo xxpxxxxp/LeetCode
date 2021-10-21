@@ -20,6 +20,6 @@ class Solution1733 {
         }
 
 
-        return exist.count { it } - counts.map { it.count { b -> b } }.max()!!
+        return exist.count { it } - counts.map { it.count { b -> b } }.maxOrNull()!!
     }
 }

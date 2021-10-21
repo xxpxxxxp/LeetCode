@@ -26,10 +26,10 @@ class Solution687 {
         }
         var maxme = lr.sum()
         if (!lrmax.isEmpty()) {
-            maxme = Math.max(maxme, lrmax.max()!!)
+            maxme = Math.max(maxme, lrmax.maxOrNull()!!)
         }
 
-        return intArrayOf(root.`val`, maxme, if (lr.isEmpty()) 0 else lr.max()!!)
+        return intArrayOf(root.`val`, maxme, if (lr.isEmpty()) 0 else lr.maxOrNull()!!)
     }
 
     fun longestUnivaluePath(root: TreeNode?): Int {

@@ -4,7 +4,7 @@ class Solution871 {
     fun minRefuelStops(target: Int, startFuel: Int, stations: Array<IntArray>): Int {
         var fuelMap = mutableMapOf(0 to startFuel)
         for (station in stations) {
-            if (station[0] >= target) return fuelMap.filter { it.value >= target }.minBy { it.key }?.key ?: -1
+            if (station[0] >= target) return fuelMap.filter { it.value >= target }.minByOrNull { it.key }?.key ?: -1
 
             val next = fuelMap.filter { it.value >= station[0] }
 
@@ -14,6 +14,6 @@ class Solution871 {
             }
         }
 
-        return fuelMap.filter { it.value >= target }.minBy { it.key }?.key ?: -1
+        return fuelMap.filter { it.value >= target }.minByOrNull { it.key }?.key ?: -1
     }
 }

@@ -12,7 +12,7 @@ class Solution1514 {
         val p = mutableMapOf(start to 1.0)
         val seen = mutableSetOf(start)
         while (p.isNotEmpty()) {
-            val (i, v) = p.maxBy { it.value }!!
+            val (i, v) = p.maxByOrNull { it.value }!!
             if (i == end) return v
             p.remove(i)
             seen.add(i)

@@ -37,7 +37,7 @@ class Solution414 {
     fun thirdMax(nums: IntArray): Int {
         val ns = nums.toSet()
         if (ns.size < 3) {
-            return ns.max()!!
+            return ns.maxOrNull()!!
         }
 
         ns.forEach { heap3.store(it) }

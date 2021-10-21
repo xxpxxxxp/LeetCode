@@ -6,7 +6,7 @@ class Solution1007 {
             return 0
         }
 
-        val t = (A + B).groupBy { it }.mapValues { it.value.size }.maxBy { it.value }!!
+        val t = (A + B).groupBy { it }.mapValues { it.value.size }.maxByOrNull { it.value }!!
 
         if (t.value < A.size) {
             return -1

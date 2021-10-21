@@ -44,7 +44,7 @@ class Solution1857 {
             if (circle)
                 return -1
 
-            max = maxOf(max, arr.max()!!)
+            max = maxOf(max, arr.maxOrNull()!!)
         }
         return max
     }

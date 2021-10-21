@@ -5,7 +5,7 @@ class Solution875 {
         fun helper(k: Int): Boolean = piles.map { (it - 1) / k + 1 }.sum() <= H
 
         var low = 1
-        var high = piles.max()!!
+        var high = piles.maxOrNull()!!
 
         while (low < high) {
             val mid = (low + high) / 2

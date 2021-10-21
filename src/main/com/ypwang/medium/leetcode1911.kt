@@ -11,7 +11,7 @@ class Solution1911 {
             cur[1] = maxOf(odd, even - v)
         }
 
-        return cur.max()!!
+        return cur.maxOrNull()!!
     }
 }
 

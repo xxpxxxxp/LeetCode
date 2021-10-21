@@ -13,7 +13,7 @@ class Solution646 {
             }
         }
 
-        return rst.max()!!
+        return rst.maxOrNull()!!
     }
 }
 

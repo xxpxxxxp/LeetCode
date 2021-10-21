@@ -8,7 +8,7 @@ class Solution1509 {
         val k = nums.size - 4
         return (0 until nums.size - k).map {
             nums[it + k] - nums[it]
-        }.min()!!
+        }.minOrNull()!!
     }
 }
 

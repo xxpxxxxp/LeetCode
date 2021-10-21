@@ -11,7 +11,7 @@ class Solution846 {
             if (m.isEmpty()) {
                 return false
             }
-            val min = m.minBy { it.key }!!.key
+            val min = m.minByOrNull { it.key }!!.key
             for (j in 0 until W) {
                 val cur = min + j
                 if (cur !in m) {

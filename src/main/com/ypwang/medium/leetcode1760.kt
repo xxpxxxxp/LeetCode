@@ -5,7 +5,7 @@ class Solution1760 {
         fun judge(i: Int): Int = nums.map { (it + i - 1) / i - 1 }.sum()
 
         var left = 1
-        var right = nums.max()!!
+        var right = nums.maxOrNull()!!
 
         while (left != right) {
             val mid = (left + right) / 2

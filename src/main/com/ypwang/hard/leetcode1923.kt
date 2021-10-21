@@ -5,7 +5,7 @@ import java.math.BigInteger
 class Solution1923 {
     fun longestCommonSubpath(n: Int, paths: Array<IntArray>): Int {
         var l = 0
-        var r = minOf(n, paths.map { it.size }.min()!!)
+        var r = minOf(n, paths.map { it.size }.minOrNull()!!)
 
         fun helper(len: Int): Boolean {
             if (len == 0)

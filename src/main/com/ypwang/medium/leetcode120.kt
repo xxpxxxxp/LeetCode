@@ -23,7 +23,7 @@ class Solution120 {
             level = next
         }
 
-        return level.min()!!
+        return level.minOrNull()!!
     }
 }
 

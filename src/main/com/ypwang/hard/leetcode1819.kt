@@ -9,7 +9,7 @@ class Solution1819 {
 
     fun countDifferentSubsequenceGCDs(nums: IntArray): Int {
         var rst = 0
-        val max = nums.max()!!
+        val max = nums.maxOrNull()!!
         val flags = BooleanArray(max+1)
         nums.forEach { flags[it] = true }
         for (i in 1..max) {

@@ -9,7 +9,7 @@ class Solution1353 {
 
         var count = 0
         var idx = 0
-        for (day in 1..events.map { it[1] }.max()!!) {
+        for (day in 1..events.map { it[1] }.maxOrNull()!!) {
             // ended events for today
             while (heap.isNotEmpty() && heap.peek() < day)
                 heap.poll()

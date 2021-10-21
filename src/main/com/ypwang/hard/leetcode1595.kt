@@ -5,7 +5,7 @@ class Solution1595 {
         val m = cost.size
         val n = cost[0].size
 
-        val minY = (0 until n).map { j -> (0 until m).map { i -> cost[i][j] }.min()!! }.toTypedArray()
+        val minY = (0 until n).map { j -> (0 until m).map { i -> cost[i][j] }.minOrNull()!! }.toTypedArray()
 
         val dp = Array(m+1) { IntArray(4096){ -1 } }
 

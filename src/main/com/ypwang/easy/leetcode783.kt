@@ -15,7 +15,7 @@ class Solution783 {
     fun minDiffInBST(root: TreeNode?): Int {
         val output = mutableListOf<TreeNode>()
         inorder(root!!, output)
-        return (0 until output.lastIndex).map{ output[it+1].`val` - output[it].`val` }.min()!!
+        return (0 until output.lastIndex).map{ output[it+1].`val` - output[it].`val` }.minOrNull()!!
     }
 }
 

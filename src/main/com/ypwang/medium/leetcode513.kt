@@ -15,7 +15,7 @@ class Solution513 {
         if (root.right != null) {
             rst.add(helper(root.right!!, depth+1))
         }
-        return rst.maxBy { it.second }!!
+        return rst.maxByOrNull { it.second }!!
     }
 
     fun findBottomLeftValue(root: TreeNode?): Int {

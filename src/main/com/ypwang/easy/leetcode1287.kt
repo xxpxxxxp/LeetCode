@@ -18,6 +18,6 @@ class Solution1287 {
             }
         }
 
-        return cnt.maxBy { it.value }!!.key
+        return cnt.maxByOrNull { it.value }!!.key
     }
 }

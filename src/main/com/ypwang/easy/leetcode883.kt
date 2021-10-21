@@ -5,7 +5,7 @@ class Solution883 {
         var total = 0
         val maxy = Array(grid.size) {0}
         for (array in grid) {
-            total += array.max() ?: 0
+            total += array.maxOrNull() ?: 0
             total += array.count{ it != 0 }
 
             for ((j, v) in array.withIndex()) {

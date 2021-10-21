@@ -27,7 +27,7 @@ class Solution2039 {
         
         return dis.zip(patience).map { (d, p) ->
             if (p == 0) 0 else 1 + 2 * d + (2 * d - 1) / p * p
-        }.max()!!
+        }.maxOrNull()!!
     }
 }
 

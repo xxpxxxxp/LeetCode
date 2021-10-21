@@ -2,9 +2,9 @@ package com.ypwang.medium
 
 class Solution807 {
     fun maxIncreaseKeepingSkyline(grid: Array<IntArray>): Int {
-        val verticalMax = grid.map { it.max()!! }
+        val verticalMax = grid.map { it.maxOrNull()!! }
         val z = grid[0].size
-        val horizontalMax = (0 until z).map { i -> (0 until grid.size).map { grid[it][i] }.max()!! }
+        val horizontalMax = (0 until z).map { i -> (0 until grid.size).map { grid[it][i] }.maxOrNull()!! }
 
         return grid.mapIndexed { x, ints ->
             ints.mapIndexed { y, value ->

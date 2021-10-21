@@ -11,7 +11,7 @@ class Solution1125 {
             if (need !in cache) {
                 cache[need] = p.withIndex().filter { it.value and need > 0 }
                     .map { helper(need and (it.value and need).inv()) + it.index }
-                    .minBy { it.size }!!
+                    .minByOrNull { it.size }!!
             }
             return cache[need]!!
         }

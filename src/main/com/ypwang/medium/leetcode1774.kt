@@ -35,9 +35,9 @@ class Solution1774 {
         return baseCosts.map { dfs(it, 0) }
             .map { Math.abs(it - target) to it }
             .groupBy { it.first }
-            .minBy { it.key }!!
+            .minByOrNull { it.key }!!
             .value
-            .minBy { it.second }!!
+            .minByOrNull { it.second }!!
             .second
     }
 }

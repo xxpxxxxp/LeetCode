@@ -6,7 +6,7 @@ class Solution313 {
         val pindex = IntArray(primes.size){0}.zip(primes).toTypedArray()
 
         for (i in 1 until n) {
-            rst[i] = pindex.map { rst[it.first] * it.second }.min()!!
+            rst[i] = pindex.map { rst[it.first] * it.second }.minOrNull()!!
 
             for ((index, p) in pindex.withIndex()) {
                 if (rst[i] == rst[p.first] * p.second) {

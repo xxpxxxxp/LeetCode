@@ -6,7 +6,7 @@ class Solution1862 {
 
     fun sumOfFlooredPairs(nums: IntArray): Int {
         val bit = IntArray(100002)
-        val max = nums.max()!!
+        val max = nums.maxOrNull()!!
 
         nums.forEach {
             var i = it + 1

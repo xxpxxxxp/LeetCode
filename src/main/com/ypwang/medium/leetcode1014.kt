@@ -22,7 +22,7 @@ class Solution1014 {
         }
 
         var l = weights.sum() / D
-        var r = Math.ceil(weights.size.toDouble() * weights.max()!! / D).toInt()
+        var r = Math.ceil(weights.size.toDouble() * weights.maxOrNull()!! / D).toInt()
 
         while (l < r) {
             val mid = (l + r) / 2

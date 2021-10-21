@@ -11,7 +11,7 @@ class Solution1629 {
             i = v
         }
 
-        val t = rst.max()!!
+        val t = rst.maxOrNull()!!
         return 'a' + rst.lastIndexOf(t)
     }
 }

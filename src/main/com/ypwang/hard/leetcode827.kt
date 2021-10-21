@@ -31,7 +31,7 @@ class Solution827 {
             }
         }
 
-        var rst = size.values.max() ?: 1
+        var rst = size.values.maxOrNull() ?: 1
         for (i in 0 until m) {
             for (j in 0 until n) {
                 if (grid[i][j] == 0 && group[i][j] == 0) {

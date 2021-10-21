@@ -12,7 +12,7 @@ class Solution515 {
         val rst = mutableListOf<Int>()
 
         while (!level.isEmpty()) {
-            rst.add(level.maxBy { it.`val` }!!.`val`)
+            rst.add(level.maxByOrNull { it.`val` }!!.`val`)
             val tmp = mutableListOf<TreeNode>()
             for (t in level) {
                 t.left?.let { tmp.add(it) }

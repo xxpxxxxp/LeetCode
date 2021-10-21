@@ -20,7 +20,7 @@ class Solution1301 {
                         if (i + 1 < m && j + 1 < n) pre.add(dp[i + 1][j + 1]!!)
 
                         if (pre.isNotEmpty()) {
-                            var collect = pre.map { it[0] }.max()!!
+                            var collect = pre.map { it[0] }.maxOrNull()!!
                             val step = pre.filter { it[0] == collect }.fold(0) { sum, it ->
                                 (sum + it[1]) % 1000000007
                             }

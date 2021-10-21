@@ -21,7 +21,7 @@ class Solution132 {
         }
 
         while (s.length !in distMap) {
-            val (next, step) = distMap.minBy { it.value }!!
+            val (next, step) = distMap.minByOrNull { it.value }!!
             for (i in next until s.length) {
                 if (dp[next][i]) {
                     if (i+1 !in distMap || distMap[i+1]!! > step+1) {

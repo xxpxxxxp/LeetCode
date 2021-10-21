@@ -17,7 +17,7 @@ class Solution1937 {
             }
 
             cur
-        }.max()!!
+        }.maxOrNull()!!
 }
 
 fun main() {

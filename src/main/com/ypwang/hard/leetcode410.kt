@@ -17,7 +17,7 @@ class Solution410 {
             return count <= m
         }
 
-        var left = nums.max()!!.toLong()
+        var left = nums.maxOrNull()!!.toLong()
         var right = nums.map { it.toLong() }.sum()
 
         while (left < right) {

@@ -18,7 +18,7 @@ class Solution740 {
 
         var sum = 0
         while (m.isNotEmpty()) {
-            val start = m.keys.min()!!
+            val start = m.keys.minOrNull()!!
             var p = start
 
             val group = mutableMapOf(Pair(p, m[p]!!))

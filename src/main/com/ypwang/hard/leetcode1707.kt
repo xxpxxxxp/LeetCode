@@ -72,7 +72,7 @@ class Solution1707 {
     fun maximizeXor(nums: IntArray, queries: Array<IntArray>): IntArray {
         // build trie
         val dummy = TreeNode()
-        val max = nums.max()!!.toString(2)
+        val max = nums.maxOrNull()!!.toString(2)
         insert(max, max.length, dummy)
 
         nums.map { it.toString(2) }.forEach { insert(it, max.length, dummy) }

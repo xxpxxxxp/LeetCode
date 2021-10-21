@@ -46,7 +46,7 @@ class Solution943 {
         var mask = (1 shl A.size) - 1
 
         // p: the last element of perm (last word written left to right)
-        var p = dp[mask].withIndex().maxBy { it.value }!!.index
+        var p = dp[mask].withIndex().maxByOrNull { it.value }!!.index
 
         // Follow parents down backwards path that retains maximum overlap
         while (p != -1) {

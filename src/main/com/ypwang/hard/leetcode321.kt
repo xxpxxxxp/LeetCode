@@ -6,7 +6,7 @@ class Solution321 {
     fun maxNumber(nums1: IntArray, nums2: IntArray, k: Int): IntArray =
         (maxOf(0, k - nums2.size)..minOf(nums1.size, k)).map {
             mergeNumber(makeNumber(nums1, it), makeNumber(nums2, k-it))
-        }.filter { it.length == k }.max()!!.map { it - '0' }.toIntArray()
+        }.filter { it.length == k }.maxOrNull()!!.map { it - '0' }.toIntArray()
 
     private fun makeNumber(nums: IntArray, k: Int): String {
         val ans = IntArray(k)

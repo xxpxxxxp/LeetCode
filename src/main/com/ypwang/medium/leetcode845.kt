@@ -16,7 +16,7 @@ class Solution845 {
                 right[i] = right[i+1] + 1
         }
 
-        return left.zip(right).filter { it.first > 0 && it.second > 0 }.map { it.first + it.second + 1 }.max() ?: 0
+        return left.zip(right).filter { it.first > 0 && it.second > 0 }.map { it.first + it.second + 1 }.maxOrNull() ?: 0
     }
 }
 

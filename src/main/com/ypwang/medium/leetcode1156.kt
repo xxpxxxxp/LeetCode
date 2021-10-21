@@ -18,7 +18,7 @@ class Solution1156 {
         val g = group.toTypedArray()
 
         val counts = text.groupBy { it }.mapValues { it.value.size }.toMap()
-        var res = g.map { minOf(it.second+1, counts[it.first]!!) }.max()!!
+        var res = g.map { minOf(it.second+1, counts[it.first]!!) }.maxOrNull()!!
 
         for (i in 1 until g.size-1) {
             if (g[i-1].first == g[i+1].first && g[i].second == 1)

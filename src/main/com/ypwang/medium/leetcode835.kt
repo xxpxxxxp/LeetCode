@@ -9,7 +9,7 @@ class Solution835 {
         val size = A.size
         return ap.flatMap { a -> bp.map {
             b -> (a.x - b.x + size) * 113 + (a.y - b.y + size)
-        } }.groupBy { it }.mapValues { it.value.size }.maxBy { it.value }?.value ?: 0
+        } }.groupBy { it }.mapValues { it.value.size }.maxByOrNull { it.value }?.value ?: 0
     }
 }
 

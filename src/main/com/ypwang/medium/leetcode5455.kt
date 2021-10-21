@@ -21,7 +21,7 @@ class Solution5455 {
         }
 
         var left = 0
-        var right = bloomDay.max()!!
+        var right = bloomDay.maxOrNull()!!
 
         while (left < right) {
             val mid = (left + right) / 2

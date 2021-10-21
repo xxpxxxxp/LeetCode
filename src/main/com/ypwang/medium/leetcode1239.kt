@@ -16,7 +16,7 @@ class Solution1239 {
 
         return t.fold(setOf(0)){ cur, i ->
             cur + (cur.filter { i and it == 0 }.map { i or it })
-        }.map { Integer.bitCount(it) }.max()!!
+        }.map { Integer.bitCount(it) }.maxOrNull()!!
     }
 }
 

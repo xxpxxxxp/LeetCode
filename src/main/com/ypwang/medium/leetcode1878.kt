@@ -34,7 +34,7 @@ class Solution1878 {
 
                     set.add(sum)
                     if (set.size > 3)
-                        set.remove(set.min()!!)
+                        set.remove(set.minOrNull()!!)
                 }
             }
         }

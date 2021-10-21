@@ -4,7 +4,7 @@ import java.util.*
 
 class Solution1388 {
     fun maxSizeSlices(slices: IntArray): Int {
-        val minIdx = slices.indexOf(slices.min()!!)
+        val minIdx = slices.indexOf(slices.minOrNull()!!)
         val rotated = slices.toMutableList()
         Collections.rotate(rotated, -minIdx)
         val noCircle = rotated.drop(1)

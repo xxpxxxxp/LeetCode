@@ -4,7 +4,7 @@ import java.util.*
 
 class Solution1081 {
     fun smallestSubsequence(text: String): String {
-        val lastPos = text.withIndex().groupBy { it.value }.mapValues { it.value.map { kv -> kv.index }.max()!! }
+        val lastPos = text.withIndex().groupBy { it.value }.mapValues { it.value.map { kv -> kv.index }.maxOrNull()!! }
 
         val stack = Stack<Char>()
         val track = mutableSetOf<Char>()

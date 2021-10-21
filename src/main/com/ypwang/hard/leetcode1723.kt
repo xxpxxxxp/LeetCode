@@ -3,7 +3,7 @@ package com.ypwang.hard
 class Solution1723 {
     fun minimumTimeRequired(jobs: IntArray, k: Int): Int {
         if (jobs.size == k)
-            return jobs.max()!!
+            return jobs.maxOrNull()!!
 
         jobs.sortDescending()
 

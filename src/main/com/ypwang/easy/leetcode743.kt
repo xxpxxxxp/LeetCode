@@ -15,7 +15,7 @@ class Solution743 {
             return 0
 
         while (true) {
-            val c = left.minBy { it.value }!!
+            val c = left.minByOrNull { it.value }!!
             if (c.value == Int.MAX_VALUE)
                 return -1
 

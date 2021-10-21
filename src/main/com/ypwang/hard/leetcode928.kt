@@ -25,7 +25,7 @@ class Solution928 {
         }
 
         return infected.withIndex().filter { it.value !in setOf(-1, 0, Int.MAX_VALUE) }.groupBy { it.value }
-                .mapValues { it.value.size }.toList().sortedBy { it.first }.maxBy { it.second }?.first ?: initial.min()!!
+                .mapValues { it.value.size }.toList().sortedBy { it.first }.maxByOrNull { it.second }?.first ?: initial.minOrNull()!!
     }
 }
 

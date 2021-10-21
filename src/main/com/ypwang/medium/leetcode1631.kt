@@ -9,7 +9,7 @@ class Solution1631 {
         val seen = mutableSetOf<Pair<Int, Int>>()
 
         while (true) {
-            val pair = avails.minBy { it.value }!!
+            val pair = avails.minByOrNull { it.value }!!
             seen.add(pair.key)
             avails.remove(pair.key)
             val i = pair.key.first

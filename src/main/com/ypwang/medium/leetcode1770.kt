@@ -21,7 +21,7 @@ class Solution1770 {
             return cache[left][right]
         }
 
-        return multipliers.indices.map { calc(it, multipliers.size - it) }.max()!!
+        return multipliers.indices.map { calc(it, multipliers.size - it) }.maxOrNull()!!
     }
 }
 

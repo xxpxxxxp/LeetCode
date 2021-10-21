@@ -16,8 +16,8 @@ class Solution843 {
         var possible = wordlist.indices.toList()
         while (possible.isNotEmpty()) {
             val guess = possible.map { guess ->
-                guess to possible.groupBy { each -> matches[each][guess] }.map { it.value.size }.max()!!
-            }.minBy { it.second }!!.first
+                guess to possible.groupBy { each -> matches[each][guess] }.map { it.value.size }.maxOrNull()!!
+            }.minByOrNull { it.second }!!.first
 
             val match = master.guess(wordlist[guess])
             if (match == 6) return

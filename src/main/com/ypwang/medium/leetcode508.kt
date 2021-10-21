@@ -21,7 +21,7 @@ class Solution508 {
 
         helper(root)
         val r = rst.groupBy { it }.map { it.value }
-        val m = r.maxBy { it.size }!!.size
+        val m = r.maxByOrNull { it.size }!!.size
         return r.filter { it.size == m }.map { it.first() }.toIntArray()
     }
 }

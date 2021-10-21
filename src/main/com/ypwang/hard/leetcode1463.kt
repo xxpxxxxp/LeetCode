@@ -24,7 +24,7 @@ class Solution1463 {
             }
 
             next
-        }.values.max()!!
+        }.values.maxOrNull()!!
     }
 }
 

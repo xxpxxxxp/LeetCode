@@ -21,7 +21,7 @@ class Solution847 {
             } while (repeat)
         }
 
-        return dp.last().min()!!
+        return dp.last().minOrNull()!!
     }
 }
 

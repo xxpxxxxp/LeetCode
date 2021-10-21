@@ -13,7 +13,7 @@ class Solution424 {
             size++
             elel.offer(c)
             eles[c] = eles.getOrDefault(c, 0) + 1
-            val m = eles.maxBy { it.value }!!
+            val m = eles.maxByOrNull { it.value }!!
 
             if (m.value + k < size) {
                 val pc = elel.poll()
@@ -29,7 +29,7 @@ class Solution424 {
                 if (pc != m.key) {
                     assert(m.value + k == size)
                 } else {
-                    while (eles.maxBy { it.value }!!.value + k < size) {
+                    while (eles.maxByOrNull { it.value }!!.value + k < size) {
                         val pc = elel.poll()
                         val pcc = eles[pc]!! - 1
 

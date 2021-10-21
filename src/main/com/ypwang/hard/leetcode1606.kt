@@ -27,7 +27,7 @@ class Solution1606 {
             counts[next]++
         }
 
-        val max = counts.max()!!
+        val max = counts.maxOrNull()!!
         return counts.withIndex().filter { it.value == max }.map { it.index }
     }
 }

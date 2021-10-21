@@ -21,7 +21,7 @@ class Solution787 {
                 }
             }
 
-            unvisited.remove(unvisited.map { it to dist[it]!! }.minBy { it.second }!!.first)
+            unvisited.remove(unvisited.map { it to dist[it]!! }.minByOrNull { it.second }!!.first)
             round++
         }
 

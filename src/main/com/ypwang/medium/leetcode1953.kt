@@ -2,7 +2,7 @@ package com.ypwang.medium
 
 class Solution1953 {
     fun numberOfWeeks(milestones: IntArray): Long {
-        val max = milestones.max()!!
+        val max = milestones.maxOrNull()!!
         val sum = milestones.fold(0L){ acc, i -> acc + i } - max
 
         if (max > sum)

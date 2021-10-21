@@ -74,7 +74,7 @@ class Solution1044 {
         val suffixArray = buildSuffixArray(S)
         val lcp = kasai(S, suffixArray)
 
-        val (i, l) = lcp.withIndex().maxBy { it.value }!!
+        val (i, l) = lcp.withIndex().maxByOrNull { it.value }!!
         return S.substring(suffixArray[i], suffixArray[i] + l)
     }
 }

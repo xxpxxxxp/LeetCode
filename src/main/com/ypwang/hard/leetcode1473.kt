@@ -19,7 +19,7 @@ class Solution1473 {
                 }
 
                 next
-            }.filter { it.key.second == target }.values.min() ?: -1
+            }.filter { it.key.second == target }.values.minOrNull() ?: -1
 }
 
 fun main() {

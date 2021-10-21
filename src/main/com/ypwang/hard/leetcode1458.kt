@@ -12,7 +12,7 @@ class Solution1458 {
 
         return dp.last().last().let {
             if (it > 0) it
-            else maxOf(nums1.min()!! * nums2.max()!!, nums1.max()!! * nums2.min()!!)
+            else maxOf(nums1.minOrNull()!! * nums2.maxOrNull()!!, nums1.maxOrNull()!! * nums2.minOrNull()!!)
         }
     }
 }

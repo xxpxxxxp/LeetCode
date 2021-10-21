@@ -18,7 +18,7 @@ class Solution2045 {
         while (true) {
             val (dist, idx) = heap.poll()
             if (idx == n && dis[n].size == 2)
-                return dis[n].max()!!
+                return dis[n].maxOrNull()!!
 
             for (next in graph.getOrDefault(idx, mutableListOf())) {
                 val cand =
@@ -28,13 +28,13 @@ class Solution2045 {
                         (dist + 2 * change - 1) / (2 * change) * (2 * change) + time
                 val l = dis[next].size
 
-                if (l == 0 || (l == 1 && dis[next][0] != cand) || (l == 2 && cand < dis[next].max()!! && cand != dis[next].min()!!)) {
+                if (l == 0 || (l == 1 && dis[next][0] != cand) || (l == 2 && cand < dis[next].maxOrNull()!! && cand != dis[next].minOrNull()!!)) {
                     dis[next].add(cand)
                     heap.add(cand to next)
                 }
 
                 if (dis[next].size == 3)
-                    dis[next].remove(dis[next].max()!!)
+                    dis[next].remove(dis[next].maxOrNull()!!)
             }
         }
     }

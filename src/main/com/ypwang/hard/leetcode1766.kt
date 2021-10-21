@@ -31,7 +31,7 @@ class Solution1766 {
         }
 
         fun helper(pre: MutableMap<Int, MutableList<Pair<Int, Int>>>, level: Int, from: Int, idx: Int) {
-            rst[idx] = cops[nums[idx]].mapNotNull { pre[it]?.lastOrNull() }.maxBy { it.first }?.second ?: -1
+            rst[idx] = cops[nums[idx]].mapNotNull { pre[it]?.lastOrNull() }.maxByOrNull { it.first }?.second ?: -1
 
             pre.getOrPut(nums[idx], { mutableListOf() }).add(level to idx)
             for (j in relation[idx]) {

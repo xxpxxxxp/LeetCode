@@ -13,7 +13,7 @@ class Solution1399 {
             cache[r]++
         }
 
-        val max = cache.filter { it != 0 }.max()!!
+        val max = cache.filter { it != 0 }.maxOrNull()!!
         return cache.count { it == max }
     }
 }

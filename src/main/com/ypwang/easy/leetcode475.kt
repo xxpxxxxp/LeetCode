@@ -17,7 +17,7 @@ class Solution475 {
                 }
                 return@map heaters[i] - it
             }
-        }.max()!!
+        }.maxOrNull()!!
     }
 }
 

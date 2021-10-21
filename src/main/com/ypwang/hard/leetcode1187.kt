@@ -25,7 +25,7 @@ class Solution1187 {
             bfs = next
         }
 
-        return bfs.keys.min() ?: -1
+        return bfs.keys.minOrNull() ?: -1
     }
 }
 

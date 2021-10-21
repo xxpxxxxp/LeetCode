@@ -30,7 +30,7 @@ class Solution1856 {
             stack.push(i)
         }
 
-        return (left.zip(right.withIndex()).map { (l, ir) -> nums[ir.index] * (preSum[ir.value] - preSum[l]) }.max()!! % 1000000007).toInt()
+        return (left.zip(right.withIndex()).map { (l, ir) -> nums[ir.index] * (preSum[ir.value] - preSum[l]) }.maxOrNull()!! % 1000000007).toInt()
     }
 }
 

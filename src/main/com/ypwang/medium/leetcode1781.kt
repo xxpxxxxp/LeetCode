@@ -8,7 +8,7 @@ class Solution1781 {
             val freq = mutableMapOf<Char, Int>()
             for (j in i until s.length) {
                 freq[s[j]] = freq.getOrDefault(s[j], 0) + 1
-                rst += freq.values.let { it.max()!! - it.min()!! }
+                rst += freq.values.let { it.maxOrNull()!! - it.minOrNull()!! }
             }
         }
 

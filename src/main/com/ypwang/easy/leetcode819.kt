@@ -3,7 +3,7 @@ package com.ypwang.easy
 class Solution819 {
     fun mostCommonWord(paragraph: String, banned: Array<String>) = paragraph.replace(Regex("[!?',;.]"), "").toLowerCase().split(' ').groupBy { it }.mapValues { it.value.size }.toMutableMap().apply {
             banned.forEach { b -> this.remove(b) }
-        }.maxBy { it.value }!!.key
+        }.maxByOrNull { it.value }!!.key
 }
 
 fun main() {
