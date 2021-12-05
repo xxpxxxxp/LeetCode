@@ -1,6 +1,6 @@
 package com.ypwang.easy
 
-class Solution {
+class Solution2068 {
     fun checkAlmostEquivalent(word1: String, word2: String): Boolean {
         val ar1 = IntArray(26)
         val ar2 = IntArray(26)
