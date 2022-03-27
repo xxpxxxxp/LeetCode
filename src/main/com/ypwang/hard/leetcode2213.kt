@@ -46,10 +46,12 @@ class Solution2213 {
             if (tl == tr) {
                 tree[pos] = Node(1, tl, tl, tr, tr)
                 s.setCharAt(idx, ch)
-                // System.out.println(pos);
             } else {
                 val tm = tl + (tr - tl) / 2
-                if (idx <= tm) update(2 * pos + 1, tl, tm, idx, ch) else update(2 * pos + 2, tm + 1, tr, idx, ch)
+                if (idx <= tm)
+                    update(2 * pos + 1, tl, tm, idx, ch)
+                else
+                    update(2 * pos + 2, tm + 1, tr, idx, ch)
                 tree[pos] = merge(tree[2 * pos + 1], tree[2 * pos + 2], tl, tm, tr)
             }
         }
