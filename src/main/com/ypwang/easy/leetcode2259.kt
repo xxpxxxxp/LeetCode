@@ -1,6 +1,6 @@
 package com.ypwang.easy
 
-class Solution {
+class Solution2259 {
     fun removeDigit(number: String, digit: Char): String {
         var j = 0
         for ((i, v) in number.withIndex()) {
