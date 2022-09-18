@@ -9,11 +9,14 @@ class Solution2405 {
             if (c in set) {
                 set.clear()
                 count++
-            } else {
-                set.add(c)
             }
+            set.add(c)
         }
 
         return count
     }
+}
+
+fun main() {
+    println(Solution2405().partitionString("abacaba"))
 }
