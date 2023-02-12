@@ -1,5 +1,5 @@
 plugins {
-    id "org.jetbrains.kotlin.jvm" version "1.7.21"
+    id "org.jetbrains.kotlin.jvm" version "1.8.0"
 }
 
 group 'com.ypwang'
@@ -18,7 +18,7 @@ sourceSets {
 }
 
 dependencies {
-    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '1.7.21'
+    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '1.8.0'
 }
 
 compileJava {
