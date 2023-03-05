@@ -2,7 +2,7 @@ package com.ypwang.hard
 
 import java.util.*
 
-class Solution {
+class Solution2532 {
     fun findCrossingTime(n: Int, k: Int, time: Array<IntArray>): Int {
         var n = n
         val lBank = PriorityQueue(compareByDescending<Int> { time[it][0] + time[it][2] }.thenByDescending { it })
