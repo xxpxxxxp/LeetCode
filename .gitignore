@@ -3,4 +3,3 @@ out/
 *.class
 .gradle
 .idea
-gradle.properties
