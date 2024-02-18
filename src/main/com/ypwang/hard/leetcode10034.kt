@@ -1,6 +1,6 @@
 package com.ypwang.hard
 
-class Solution10034 {
+class Solution10034b {
     fun numberOfPowerfulInt(start: Long, finish: Long, limit: Int, s: String): Long {
         val cnt = LongArray(16)
 
