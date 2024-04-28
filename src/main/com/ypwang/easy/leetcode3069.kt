@@ -1,6 +1,6 @@
 package com.ypwang.easy
 
-class Solution {
+class Solution3069 {
     fun resultArray(nums: IntArray): IntArray {
         val n1 = mutableListOf(nums[0])
         val n2 = mutableListOf(nums[1])
