@@ -33,13 +33,13 @@ class Solution3357 {
 
         for (i in nums.indices) {
             if (nums[i] != -1 && ((i > 0 && nums[i - 1] == -1) || (i < nums.size - 1 && nums[i + 1] == -1))) {
-                lowerBounds.add(nums[i] - maxDiff)
-                upperBounds.add(nums[i] + maxDiff)
+                lowerBounds.add(nums[i] + maxDiff)
+                upperBounds.add(nums[i] - maxDiff)
             }
         }
 
-        val minValue = lowerBounds.min()!! + 2 * maxDiff
-        val maxValue = upperBounds.max()!! - 2 * maxDiff
+        val minValue = lowerBounds.min()!!
+        val maxValue = upperBounds.max()!!
 
         for (i in nums.indices) {
             if (nums[i] == -1) {
