@@ -7,7 +7,7 @@ class Solution1763 {
 
         val set = s.toSet()
         for ((i, c) in s.withIndex()) {
-            if (!set.contains(c.toUpperCase()) || !set.contains(c.toLowerCase())) {
+            if (!set.contains(c.uppercaseChar()) || !set.contains(c.lowercaseChar())) {
                 val sub1 = longestNiceSubstring(s.substring(0, i))
                 val sub2 = longestNiceSubstring(s.substring(i + 1))
                 return if (sub1.length >= sub2.length) sub1 else sub2

@@ -8,7 +8,7 @@ class Solution966 {
     fun spellchecker(wordList: Array<String>, queries: Array<String>): Array<String> {
         for (word in wordList) {
             wordsPerfect.add(word)
-            val wordLow = word.toLowerCase()
+            val wordLow = word.lowercase()
             wordsCap.putIfAbsent(wordLow, word)
             wordsVow.putIfAbsent(deVowel(wordLow), word)
         }
@@ -20,7 +20,7 @@ class Solution966 {
         if (wordsPerfect.contains(query))
             return query
 
-        val queryL = query.toLowerCase()
+        val queryL = query.lowercase()
         if (queryL in wordsCap) return wordsCap[queryL]!!
 
         val queryLV = deVowel(queryL)

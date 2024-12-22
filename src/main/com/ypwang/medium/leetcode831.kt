@@ -6,11 +6,11 @@ class Solution831 {
     fun maskEmail(S: String): String {
         val part = S.split('@')
         return StringBuilder().apply {
-            append(part[0].first().toLowerCase())
+            append(part[0].first().lowercase())
             append("*****")
-            append(part[0].last().toLowerCase())
+            append(part[0].last().lowercase())
             append('@')
-            append(part[1].toLowerCase())
+            append(part[1].lowercase())
         }.toString()
     }
 
