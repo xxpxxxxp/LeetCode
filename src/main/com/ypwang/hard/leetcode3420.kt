@@ -6,12 +6,7 @@ import java.util.LinkedList
 class Solution3420 {
     fun countNonDecreasingSubarrays(nums: IntArray, k: Int): Long {
         // Reverse the array
-        val n = nums.size
-        for (i in 0 until n / 2) {
-            val temp = nums[i]
-            nums[i] = nums[n - 1 - i]
-            nums[n - 1 - i] = temp
-        }
+        nums.reverse()
 
         var res = 0L
         val q: Deque<Int> = LinkedList()
@@ -28,9 +23,8 @@ class Solution3420 {
             q.addLast(j)
             while (k < 0) {
                 k += nums[q.first()] - nums[i]
-                if (q.first() == i) {
+                if (q.first() == i)
                     q.removeFirst()
-                }
                 i++
             }
             res += j - i + 1
