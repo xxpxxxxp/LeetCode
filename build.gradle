@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-    id "org.jetbrains.kotlin.jvm" version "2.2.10"
+    id "org.jetbrains.kotlin.jvm" version "2.2.20"
 }
 
 group = 'com.ypwang'
@@ -20,7 +20,7 @@ sourceSets {
 }
 
 dependencies {
-    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '2.2.10'
+    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '2.2.20'
 }
 
 compileJava {
