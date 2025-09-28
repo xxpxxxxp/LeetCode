@@ -20,7 +20,7 @@ sourceSets {
 }
 
 dependencies {
-    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '2.2.20'
+    "org.jetbrains.kotlin:kotlin-stdlib:2.2.20"
 }
 
 compileJava {
