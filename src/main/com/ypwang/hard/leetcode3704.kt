@@ -24,9 +24,8 @@ class Solution3704 {
                     var curr = jj + carry
                     val newCarry = curr / 10
                     curr %= 10
-                    if (curr == a[i]) {
+                    if (curr == a[i])
                         ans += solve(i + 1, newCarry, done1, done2, 1)
-                    }
                 }
             }
 
@@ -35,9 +34,8 @@ class Solution3704 {
                     var curr = ii + carry
                     val newCarry = curr / 10
                     curr %= 10
-                    if (curr == a[i]) {
+                    if (curr == a[i])
                         ans += solve(i + 1, newCarry, done1, done2, 1)
-                    }
                 }
             }
 
