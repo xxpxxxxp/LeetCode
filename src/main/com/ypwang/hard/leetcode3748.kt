@@ -40,8 +40,8 @@ class Solution3748 {
 
         val blockId = IntArray(n)
         for (b in 0 until B) {
-            val s: Int = starts[b]
-            val e: Int = ends[b]
+            val s = starts[b]
+            val e = ends[b]
             for (idx in s..e)
                 blockId[idx] = b
         }
@@ -68,11 +68,11 @@ class Solution3748 {
                 continue
             }
 
-            val endBl: Int = ends[bl]
+            val endBl = ends[bl]
             val len1 = endBl.toLong() - l + 1L
             var res = len1 * (len1 + 1L) / 2L
 
-            val startBr: Int = starts[br]
+            val startBr = starts[br]
             val len2 = r.toLong() - startBr + 1L
             res += len2 * (len2 + 1L) / 2L
 
