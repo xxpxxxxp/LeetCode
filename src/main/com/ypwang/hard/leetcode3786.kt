@@ -15,14 +15,14 @@ class Solution3786 {
         for (g in group)
             totalInGroup[g]++
 
-        fun dfs(u: Int, p: Int, group: IntArray) {
+        fun dfs(u: Int, p: Int) {
             counts[u][group[u]] = 1
 
             for (v in adj[u]) {
                 if (v == p)
                     continue
 
-                dfs(v, u, group)
+                dfs(v, u)
 
                 for (g in 1..20) {
                     if (totalInGroup[g] < 2)
@@ -37,7 +37,7 @@ class Solution3786 {
             }
         }
 
-        dfs(0, -1, group)
+        dfs(0, -1)
         return totalCost
     }
 }
