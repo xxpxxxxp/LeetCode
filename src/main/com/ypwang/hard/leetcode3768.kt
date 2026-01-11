@@ -1,6 +1,6 @@
 package com.ypwang.hard
 
-class Solution {
+class Solution3768 {
     class Tree(var n: Int) {
         var t = IntArray(n + 2)
 
