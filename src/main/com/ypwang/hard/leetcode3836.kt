@@ -1,6 +1,6 @@
 package com.ypwang.hard
 
-class Solution {
+class Solution3836 {
     fun maxScore(nums1: IntArray, nums2: IntArray, k: Int): Long {
         val n = nums1.size
         val m = nums2.size
