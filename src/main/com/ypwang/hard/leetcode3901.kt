@@ -1,6 +1,6 @@
 package com.ypwang.hard
 
-class Solution {
+class Solution3901 {
     fun countGoodSubseq(nums: IntArray, p: Int, queries: Array<IntArray>): Int {
         val n = nums.size
 

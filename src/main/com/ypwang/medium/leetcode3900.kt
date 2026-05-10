@@ -1,6 +1,6 @@
 package com.ypwang.medium
 
-class Solution {
+class Solution3900 {
     fun longestBalanced(s: String): Int {
         val mpp = mutableMapOf<Int, MutableList<Int>>()
         mpp[0] = mutableListOf(-1)
