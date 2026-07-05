@@ -2,7 +2,7 @@ package com.ypwang.hard
 
 import java.util.PriorityQueue
 
-class Solution {
+class Solution3692 {
     fun maxSum(nums: IntArray, k: Int): Long {
         val n = nums.size
         // In C++, INT_MIN is an integer (-2147483648).
